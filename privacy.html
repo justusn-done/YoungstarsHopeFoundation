@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ===== SECURITY HEADERS =====
+         Same least-privilege approach as terms.html: no external forms or
+         images on this page, so the policy is tighter than the rest of the
+         site. X-Frame-Options / X-Content-Type-Options / HSTS still need to
+         be set at your hosting/server level — a <meta> tag can't do that. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://fonts.googleapis.com; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; frame-ancestors 'self'; upgrade-insecure-requests;" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="robots" content="noindex, follow" />
+
+    <title>Privacy Policy | YoungStars Hope Foundation-Africa</title>
+    <meta name="description" content="How YoungStars Hope Foundation-Africa collects, uses, and protects the personal information of volunteers, donors, and subscribers." />
+    <link rel="canonical" href="https://youngstarsafrica.org/privacy.html" />
+
+    <!-- ===== PERFORMANCE ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <!-- No hero photo here either — same reasoning as terms.html: a policy
+         page should be the fastest page on the site, not the prettiest. -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Karla:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/main.min.css" />
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header fixed-top" id="header" role="banner" aria-label="Site header">
+        <nav class="navbar navbar-expand-lg py-2" aria-label="Main navigation">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="YoungStars Hope Foundation-Africa home">
+                    <img src="assets/img/logo.png" alt="YoungStars Hope Foundation-Africa logo" height="50" width="50" class="me-2" />
+                     <span class="brand-text">
+                        <span class="brand-name">YoungStars</span>
+                        <span class="brand-sub me-4">Hope Foundation &mdash; Africa</span>
+                    </span>
+                </a>
+
+                <!-- Mobile toggle -->
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars" style="color: var(--charcoal); font-size: 1.5rem;" aria-hidden="true"></i>
+            </button>
+
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="nav-links">
+                        <li><a class="nav-link" href="index.html">Home</a></li>
+                        <li><a class="nav-link" href="about.html">About</a></li>
+                        <li><a class="nav-link" href="programs.html">Programs</a></li>
+                        <li><a class="nav-link" href="get-involved.html">Get Involved</a></li>
+                        <li><a class="nav-link" href="events.html">Events</a></li>
+                        <li><a class="nav-link" href="news.html">News</a></li>
+                        <li><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li><a class="nav-link" href="faq.html">FAQ</a></li>
+                        <li class="nav-cta">
+                            <button class="btn-donate" data-bs-toggle="modal" data-bs-target="#donationModal" aria-label="Open donation form">
+                                <i class="fas fa-heart" aria-hidden="true"></i> Donate
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main id="main-content">
+
+        <!-- ===== PAGE BANNER (no photo — loads instantly) ===== -->
+        <section class="page-banner no-photo" aria-labelledby="privacy-hero-heading">
+            <div class="hero-scrim"></div>
+            <div class="container banner-inner">
+                <p class="breadcrumb"><a href="index.html">Home</a><span>/</span>Privacy Policy</p>
+                <p class="eyebrow eyebrow-light"><span class="tag-dot" aria-hidden="true"></span>Legal</p>
+                <h1 id="privacy-hero-heading" class="page-title">Privacy <em>Policy</em></h1>
+                <p class="hero-lead">How we collect, use, and protect the personal information of volunteers, donors, and subscribers.</p>
+                <p class="legal-updated">Last updated: <strong>11 July 2026</strong></p>
+            </div>
+        </section>
+
+        <!-- ===== PRIVACY BODY ===== -->
+        <section class="legal-section" aria-label="Privacy Policy document">
+            <div class="container">
+                <div class="row g-5">
+
+                    <!-- TOC -->
+                    <div class="col-lg-3">
+                        <nav class="legal-toc" aria-label="Table of contents">
+                            <p class="legal-toc-title">On This Page</p>
+                            <ul id="legalToc">
+                                <li><a href="#overview" class="legal-toc-link">1. Overview</a></li>
+                                <li><a href="#controller" class="legal-toc-link">2. Who We Are</a></li>
+                                <li><a href="#what-we-collect" class="legal-toc-link">3. What We Collect</a></li>
+                                <li><a href="#how-we-use" class="legal-toc-link">4. How We Use It</a></li>
+                                <li><a href="#legal-basis" class="legal-toc-link">5. Legal Basis</a></li>
+                                <li><a href="#sharing" class="legal-toc-link">6. Third Parties &amp; Sharing</a></li>
+                                <li><a href="#cookies" class="legal-toc-link">7. Cookies &amp; Tracking</a></li>
+                                <li><a href="#retention" class="legal-toc-link">8. Data Retention</a></li>
+                                <li><a href="#children" class="legal-toc-link">9. Children's Privacy</a></li>
+                                <li><a href="#rights" class="legal-toc-link">10. Your Rights</a></li>
+                                <li><a href="#security" class="legal-toc-link">11. Data Security</a></li>
+                                <li><a href="#transfers" class="legal-toc-link">12. International Transfers</a></li>
+                                <li><a href="#changes" class="legal-toc-link">13. Changes to This Policy</a></li>
+                                <li><a href="#contact" class="legal-toc-link">14. Contact Us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <!-- Document -->
+                    <div class="col-lg-9">
+                        <div class="legal-notice">
+                            <i class="fas fa-info-circle" aria-hidden="true"></i>
+                            <p>
+                                This policy is written to match exactly what this website does
+                                today — it doesn't promise things the site doesn't actually do,
+                                and it doesn't skip things it does. It is a solid starting point,
+                                not legal advice. Please have it reviewed by an advocate familiar
+                                with Kenya's Data Protection Act, 2019, and fill in the bracketed
+                                details specific to your organisation, before publishing it.
+                            </p>
+                        </div>
+
+                        <article class="legal-doc">
+                            <section id="overview">
+                                <h2>1. Overview</h2>
+                                <p>
+                                    YoungStars Hope Foundation&ndash;Africa ("we", "us", "the
+                                    Foundation") respects your privacy. This Policy explains what
+                                    personal information we collect through this website
+                                    (youngstarsafrica.org), why we collect it, who we share it
+                                    with, and the rights you have over it. It applies to anyone who
+                                    browses the Site, applies to volunteer, makes a donation, or
+                                    subscribes to our newsletter.
+                                </p>
+                            </section>
+
+                            <section id="controller">
+                                <h2>2. Who We Are</h2>
+                                <p>
+                                    YoungStars Hope Foundation&ndash;Africa is the data controller
+                                    for information collected through this Site. [Insert
+                                    registration type and number, e.g. registered under the NGO
+                                    Coordination Act / as a Trust], based in Kitui / Nairobi, Kenya.
+                                    Contact details are in Section 14.
+                                </p>
+                            </section>
+
+                            <section id="what-we-collect">
+                                <h2>3. What We Collect</h2>
+                                <p>We only collect what a specific form on this Site asks for:</p>
+                                <div class="legal-table-wrap">
+                                    <table class="legal-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Information</th>
+                                                <th>When</th>
+                                                <th>Why</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Full name, email, phone number, area of interest, availability, message</td>
+                                                <td>You submit the Volunteer application form</td>
+                                                <td>To review your application and contact you about volunteering</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Email address, name (optional)</td>
+                                                <td>You subscribe to our newsletter</td>
+                                                <td>To send you programme updates and impact stories</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Phone number, donation amount, name (optional)</td>
+                                                <td>You make a donation</td>
+                                                <td>To request payment via M-Pesa and thank you for your gift</td>
+                                            </tr>
+                                            <tr>
+                                                <td>IP address, browser and device type</td>
+                                                <td>Automatically, on every page visit</td>
+                                                <td>Standard web-server and content-delivery operation and security &mdash; not used for tracking or advertising</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p>
+                                    We do not ask for national ID numbers, payment card details, or
+                                    M-Pesa PINs anywhere on this Site.
+                                </p>
+                            </section>
+
+                            <section id="how-we-use">
+                                <h2>4. How We Use It</h2>
+                                <ul>
+                                    <li>To respond to volunteer applications and coordinate placements;</li>
+                                    <li>To process donation requests through our payment channels;</li>
+                                    <li>To send newsletter updates to people who asked for them;</li>
+                                    <li>To keep the Site secure and working correctly;</li>
+                                    <li>To meet legal or regulatory obligations where applicable.</li>
+                                </ul>
+                                <p>We do not sell, rent, or trade your personal information to anyone.</p>
+                            </section>
+
+                            <section id="legal-basis">
+                                <h2>5. Legal Basis for Processing</h2>
+                                <p>Under Kenya's Data Protection Act, 2019, we rely on:</p>
+                                <ul>
+                                    <li><strong>Consent</strong> &mdash; for newsletter sign-ups and volunteer applications, given when you tick the "I agree" box and submit a form;</li>
+                                    <li><strong>Contract / steps prior to a contract</strong> &mdash; for processing a donation you've chosen to make;</li>
+                                    <li><strong>Legitimate interest</strong> &mdash; for basic security and operation of the Site (e.g. blocking spam submissions).</li>
+                                </ul>
+                            </section>
+
+                            <section id="sharing">
+                                <h2>6. Third Parties &amp; Sharing</h2>
+                                <p>We use a small number of trusted service providers to run this Site. Each only receives what it needs to do its job:</p>
+                                <ul>
+                                    <li><strong>Web3Forms</strong> &mdash; receives volunteer and newsletter form submissions and delivers them to our email inbox.</li>
+                                    <li><strong>Safaricom M-Pesa</strong> (or other mobile-money provider) &mdash; processes donation payments; we never see or store your PIN.</li>
+                                    <li><strong>Content-delivery networks</strong> (jsDelivr, cdnjs, Google Fonts) &mdash; serve the layout library, icons and fonts used on this page. Visiting any page on this Site causes your browser to request files from these providers directly, which means they can see your IP address for that request, the same as any website that uses shared web infrastructure.</li>
+                                </ul>
+                                <p>We do not share your information with advertisers, and we do not use it to build advertising profiles.</p>
+                            </section>
+
+                            <section id="cookies">
+                                <h2>7. Cookies &amp; Tracking</h2>
+                                <p>
+                                    This Site does not set its own cookies and does not run
+                                    analytics or advertising trackers. If that changes in future
+                                    (for example, if we add a visitor-analytics tool), we will
+                                    update this Policy and, where required, ask for your consent
+                                    first.
+                                </p>
+                            </section>
+
+                            <section id="retention">
+                                <h2>8. Data Retention</h2>
+                                <p>
+                                    We keep volunteer application details for as long as needed to
+                                    consider and manage your involvement, and donation/contact
+                                    records as needed for our financial and reporting obligations.
+                                    Newsletter emails are kept until you unsubscribe. You can ask us
+                                    to delete your information at any time (see Section 10).
+                                </p>
+                            </section>
+
+                            <section id="children">
+                                <h2>9. Children's Privacy</h2>
+                                <p>
+                                    The public forms on this Site are intended for adults (18+)
+                                    acting on their own behalf &mdash; for example, a parent or
+                                    guardian enquiring on a child's behalf. We do not knowingly
+                                    collect personal data directly from children through these
+                                    forms. Information about a minor participating in our programs
+                                    is collected separately, offline or through a parent/guardian,
+                                    with appropriate consent and additional safeguarding measures.
+                                </p>
+                            </section>
+
+                            <section id="rights">
+                                <h2>10. Your Rights</h2>
+                                <p>Under the Data Protection Act, 2019, you have the right to:</p>
+                                <ul>
+                                    <li>Access the personal data we hold about you;</li>
+                                    <li>Ask us to correct inaccurate data;</li>
+                                    <li>Ask us to delete your data ("right to erasure");</li>
+                                    <li>Object to or restrict certain processing;</li>
+                                    <li>Withdraw consent at any time (e.g. unsubscribe from the newsletter);</li>
+                                    <li>Lodge a complaint with the Office of the Data Protection Commissioner (ODPC), Kenya, if you believe we have mishandled your data.</li>
+                                </ul>
+                                <p>To exercise any of these, contact us using the details in Section 14.</p>
+                            </section>
+
+                            <section id="security">
+                                <h2>11. Data Security</h2>
+                                <p>
+                                    We serve this Site over HTTPS, apply a Content-Security-Policy
+                                    to reduce the risk of malicious scripts, and use spam-detection
+                                    (honeypot fields) on our forms. No method of transmission or
+                                    storage is 100% secure, but we take reasonable, proportionate
+                                    steps to protect your information.
+                                </p>
+                            </section>
+
+                            <section id="transfers">
+                                <h2>12. International Transfers</h2>
+                                <p>
+                                    Some of the third-party providers listed in Section 6 may
+                                    process or store data outside Kenya. Where this happens, we
+                                    rely on those providers' own safeguards and, where required by
+                                    law, appropriate transfer mechanisms.
+                                </p>
+                            </section>
+
+                            <section id="changes">
+                                <h2>13. Changes to This Policy</h2>
+                                <p>
+                                    We may update this Policy from time to time to reflect changes
+                                    in how the Site works or in applicable law. The "Last updated"
+                                    date at the top of this page shows the most recent revision.
+                                </p>
+                            </section>
+
+                            <section id="contact">
+                                <h2>14. Contact Us</h2>
+                                <p>For privacy questions or to exercise your rights, contact:</p>
+                                <ul class="legal-contact-list">
+                                    <li><i class="fas fa-envelope" aria-hidden="true"></i> info@youngstarsafrica.org</li>
+                                    <li><i class="fas fa-phone" aria-hidden="true"></i> +254 791 285 657</li>
+                                    <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Kitui / Nairobi, Kenya</li>
+                                </ul>
+                            </section>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer" role="contentinfo" aria-label="Site footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <img src="assets/img/logo.png" alt="" height="36" width="36" />
+                        <div>
+                            <span class="footer-name">YoungStars</span>
+                            <span class="footer-sub">Hope Foundation &mdash; Africa</span>
+                        </div>
+                    </div>
+                    <p class="footer-blurb">Empowering lives, inspiring dreams and transforming communities across Africa.</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="get-involved.html">Get Involved</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="programs.html#academic">Academic Training</a></li>
+                        <li><a href="programs.html#talent">Talent Development</a></li>
+                        <li><a href="programs.html#stem">STEM Engagement</a></li>
+                        <li><a href="programs.html#outreach">Community Outreach</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h4>Get In Touch</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone" aria-hidden="true"></i> +254 791 285 657</li>
+                        <li><i class="fas fa-phone" aria-hidden="true"></i> +254 112 366 543</li>
+                        <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Kitui / Nairobi, Kenya</li>
+                        <li><i class="fas fa-envelope" aria-hidden="true"></i> info@youngstarsafrica.org</li>
+                    </ul>
+                </div>
+            </div>
+            <hr />
+            <div class="footer-bottom">
+                <p>&copy; <span id="footer-year">2026</span> YoungStars Hope Foundation-Africa. All rights reserved.</p>
+                <p>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== DONATION MODAL ===== -->
+    <div class="modal fade" id="donationModal" tabindex="-1" aria-labelledby="donationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content donation-modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title" id="donationModalLabel">
+                        <i class="fas fa-heart" aria-hidden="true"></i> Support Our Mission
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close donation form"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="modal-intro">Your donation helps us empower youth across Africa. Thank you for your generosity.</p>
+
+                    <form id="donationForm" novalidate autocomplete="on">
+                        <div class="mb-3">
+                            <label class="form-label">Select Amount</label>
+                            <div class="amount-group">
+                                <button type="button" class="amount-btn" data-amount="500">KSh 500</button>
+                                <button type="button" class="amount-btn" data-amount="1000">KSh 1,000</button>
+                                <button type="button" class="amount-btn" data-amount="2500">KSh 2,500</button>
+                                <button type="button" class="amount-btn" data-amount="5000">KSh 5,000</button>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="customAmount" class="form-label">Or enter custom amount</label>
+                            <div class="input-group">
+                                <span class="input-group-text">KSh</span>
+                                <input type="number" id="customAmount" class="form-control" placeholder="e.g. 750" min="1" max="1000000" step="1" inputmode="numeric" />
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="donorPhone" class="form-label">Phone Number <span class="required">*</span></label>
+                            <input type="tel" id="donorPhone" class="form-control" placeholder="0712345678 or 254712345678"
+                                   required aria-describedby="phoneHelp" autocomplete="tel" inputmode="tel"
+                                   maxlength="13" pattern="^(0(7|1)[0-9]{8}|254(7|1)[0-9]{8})$" />
+                            <div id="phoneHelp" class="form-text">Enter the M-Pesa registered phone number.</div>
+                            <div class="invalid-feedback">Please enter a valid phone number (07XX or 2547XX).</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="donorName" class="form-label">Your Name (optional)</label>
+                            <input type="text" id="donorName" class="form-control" placeholder="e.g. Jane Muthoni" autocomplete="name" maxlength="80" />
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input type="checkbox" id="donorTermsConsent" name="terms_consent" class="form-check-input" required value="yes" />
+                                <label for="donorTermsConsent" class="form-check-label">
+                                    I agree to the <a href="terms.html" target="_blank" rel="noopener noreferrer">Terms</a> and
+                                    <a href="privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a> <span class="required">*</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="honeypot" aria-hidden="true">
+                            <label for="honeypot">Leave this field empty</label>
+                            <input type="text" id="honeypot" name="honeypot" tabindex="-1" autocomplete="off" />
+                        </div>
+
+                        <button type="submit" class="btn btn-primary-warm w-100" id="donateSubmitBtn">
+                            <i class="fas fa-arrow-right" aria-hidden="true"></i> Donate Now
+                        </button>
+
+                        <div id="donationStatus" class="donation-status" role="status" aria-live="polite"></div>
+
+                        <hr />
+                        <p class="modal-fallback">
+                            <i class="fas fa-info-circle" aria-hidden="true"></i>
+                            Airtel / Telkom users: Pay via Paybill <strong>123456</strong> Account <strong>YOUNGSTARS</strong>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+    <script src="assets/js/main.min.js" defer></script>
+</body>
+</html>

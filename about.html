@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ===== SECURITY HEADERS (see note at bottom of this file / chat reply) =====
+         A <meta> CSP can only do so much — X-Frame-Options, X-Content-Type-Options
+         and Strict-Transport-Security CANNOT be set this way and must be added at
+         your hosting/server level. This tag still meaningfully reduces XSS risk by
+         refusing inline scripts and unlisted origins. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://fonts.googleapis.com; img-src 'self' https://images.unsplash.com data:; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; frame-ancestors 'self'; upgrade-insecure-requests;" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <title>About Us | YoungStars Hope Foundation-Africa</title>
+    <meta name="description" content="YoungStars Hope Foundation-Africa empowers youth across Kenya through education, mentorship, talent development, and community outreach. Learn about our mission, vision, and programs." />
+    <link rel="canonical" href="https://youngstarsafrica.org/about.html" />
+
+    <meta property="og:title" content="About Us | YoungStars Hope Foundation-Africa" />
+    <meta property="og:description" content="Empowering lives, inspiring dreams and transforming communities across Africa." />
+    <meta property="og:image" content="https://youngstarsafrica.org/assets/img/og-image.jpg" />
+    <meta property="og:url" content="https://youngstarsafrica.org/about.html" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="About Us | YoungStars Hope Foundation-Africa" />
+    <meta name="twitter:description" content="Empowering lives, inspiring dreams and transforming communities across Africa." />
+    <meta name="twitter:image" content="https://youngstarsafrica.org/assets/img/og-image.jpg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Karla:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/main.min.css" />
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "YoungStars Hope Foundation-Africa",
+            "url": "https://youngstarsafrica.org",
+            "logo": "assets/img/logo.png",
+            "description": "Empowering lives, inspiring dreams and transforming communities across Africa.",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Kitui / Nairobi",
+                "addressCountry": "KE"
+            },
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+254791285657",
+                "contactType": "General Inquiries"
+            },
+            "sameAs": [
+                "https://facebook.com/youngstarsafrica",
+                "https://twitter.com/youngstarsafrica",
+                "https://instagram.com/youngstarsafrica",
+                "https://linkedin.com/company/youngstarsafrica"
+            ]
+        }
+    </script>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ===== HEADER ===== -->
+    <header class="site-header" id="header" role="banner" aria-label="Site header">
+        <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+            <div class="container nav-inner">
+                <a class="brand" href="index.html" aria-label="YoungStars Hope Foundation-Africa home">
+                    <img src="assets/img/logo.png" alt="" height="44" width="44" class="brand-mark" />
+                    <span class="brand-text">
+                        <span class="brand-name">YoungStars</span>
+                        <span class="brand-sub me-4">Hope Foundation &mdash; Africa</span>
+                    </span>
+                </a>
+
+                <button class="nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation menu">
+                    <span></span><span></span><span></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="nav-links">
+                        <li><a class="nav-link" href="index.html">Home</a></li>
+                        <li><a class="nav-link active" href="about.html" aria-current="page">About</a></li>
+                        <li><a class="nav-link" href="programs.html">Programs</a></li>
+                        <li><a class="nav-link" href="get-involved.html">Get Involved</a></li>
+                        <li><a class="nav-link" href="events.html">Events</a></li>
+                        <li><a class="nav-link" href="news.html">News</a></li>
+                        <li><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li><a class="nav-link" href="faq.html">FAQ</a></li>
+                        <li class="nav-cta">
+                            <button class="btn-donate" data-bs-toggle="modal" data-bs-target="#donationModal" aria-label="Open donation form">
+                                <i class="fas fa-heart" aria-hidden="true"></i> Donate
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main id="main-content">
+
+        <!-- ===== PAGE BANNER ===== -->
+        <section class="page-banner" aria-labelledby="about-hero-heading">
+            <div class="hero-bg banner-bg-about"></div>
+            <div class="hero-scrim"></div>
+            <svg class="hero-constellation banner-constellation" viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <g class="const-lines" stroke="rgba(214,161,60,0.4)" stroke-width="1.2" fill="none">
+                    <path d="M 70 300 L 200 240 L 330 270 L 470 160 L 580 90" />
+                    <path d="M 200 240 L 240 130" />
+                </g>
+                <g class="const-stars" fill="#D6A13C">
+                    <circle class="star" cx="70" cy="300" r="3" />
+                    <circle class="star" cx="200" cy="240" r="2.4" />
+                    <circle class="star" cx="240" cy="130" r="3.4" />
+                    <circle class="star" cx="330" cy="270" r="2.2" />
+                    <circle class="star" cx="470" cy="160" r="4.2" />
+                    <circle class="star" cx="580" cy="90" r="5" />
+                </g>
+            </svg>
+            <div class="container banner-inner">
+                <p class="eyebrow eyebrow-light"><span class="tag-dot" aria-hidden="true"></span>About Our Foundation</p>
+                <h1 id="about-hero-heading" class="page-title">Know Who <em>We Are</em></h1>
+                <p class="hero-lead">
+                    We are a movement of hope, purpose and transformation &mdash; building a
+                    generation that rises beyond limitations.
+                </p>
+                <div class="hero-actions">
+                    <a href="#mission" class="btn btn-primary-warm">
+                        <i class="fas fa-arrow-right" aria-hidden="true"></i> Our Mission
+                    </a>
+                    <a href="#programs-brief" class="btn btn-outline-light">
+                        <i class="fas fa-graduation-cap" aria-hidden="true"></i> Our Programs
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== WHO WE ARE ===== -->
+        <section id="who-we-are" class="about-brief" aria-labelledby="who-heading">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <p class="eyebrow"><span class="tag-dot" aria-hidden="true"></span>Who We Are</p>
+                        <h2 id="who-heading" class="section-title">
+                            Empowering Lives,<br /><span class="accent">Inspiring Dreams</span>
+                        </h2>
+                        <p class="lede">
+                            YoungStars Hope Foundation&ndash;Africa is a platform dedicated to
+                            empowering lives, inspiring dreams and transforming communities &mdash;
+                            restoring hope, igniting purpose and raising a generation that rises
+                            beyond limitations, lighting the path for Africa&rsquo;s next generation.
+                        </p>
+                        <blockquote class="pull-quote">
+                            &ldquo;Inside every young person lies a star waiting to shine.&rdquo;
+                        </blockquote>
+                        <div class="feature-chips">
+                            <div class="feature-chip">
+                                <span class="feature-chip-icon"><i class="fas fa-flag" aria-hidden="true"></i></span>
+                                <div>
+                                    <h6>Mission-Driven</h6>
+                                    <small>Unlocking potential</small>
+                                </div>
+                            </div>
+                            <div class="feature-chip">
+                                <span class="feature-chip-icon"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i></span>
+                                <div>
+                                    <h6>Community First</h6>
+                                    <small>Transforming lives</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-media-wrap fade-up">
+                            <img src="https://images.unsplash.com/photo-1473649085228-583485e6e4d7?auto=format&amp;fit=crop&amp;w=1100&amp;q=80"
+                                 alt="Young learners sitting together in a classroom" loading="lazy" decoding="async" />
+                            <div class="floating-stat-card">
+                                <div class="mini-stat"><i class="fas fa-star" aria-hidden="true"></i><span>500+</span><small>Youth Impacted</small></div>
+                                <div class="mini-stat"><i class="fas fa-hands-helping" aria-hidden="true"></i><span>10+</span><small>Communities</small></div>
+                                <div class="mini-stat"><i class="fas fa-graduation-cap" aria-hidden="true"></i><span>4</span><small>Core Programs</small></div>
+                                <div class="mini-stat"><i class="fas fa-leaf" aria-hidden="true"></i><span>100%</span><small>Environmental Focus</small></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== MISSION & VISION ===== -->
+        <section id="mission" class="mission-band" aria-labelledby="mission-heading">
+            <div class="mission-band-bg" aria-hidden="true"></div>
+            <div class="mission-band-scrim" aria-hidden="true"></div>
+            <div class="container mission-band-inner">
+                <div class="text-center">
+                    <p class="eyebrow eyebrow-light justify-center"><span class="tag-dot" aria-hidden="true"></span>Our Purpose</p>
+                    <h2 id="mission-heading" class="section-title on-dark">
+                        Unlock Potential, <span class="accent-gold">Restore Hope</span>
+                    </h2>
+                    <p class="hero-lead mission-lead">
+                        To unlock potential, restore hope and raise visionary, morally grounded
+                        youth who will lead meaningful change in Kenya and across Africa.
+                    </p>
+                </div>
+
+                <div class="row g-4 mt-4 justify-content-center">
+                    <div class="col-md-4">
+                        <div class="pillar-card fade-up">
+                            <i class="fas fa-rocket" aria-hidden="true"></i>
+                            <h6>Visionary</h6>
+                            <p>Raising leaders who see beyond today</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="pillar-card fade-up">
+                            <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                            <h6>Morally Grounded</h6>
+                            <p>Character-driven leadership</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="pillar-card fade-up">
+                            <i class="fas fa-globe-africa" aria-hidden="true"></i>
+                            <h6>Pan-African</h6>
+                            <p>Transforming Kenya and Africa</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vision-block text-center">
+                    <p class="eyebrow eyebrow-light justify-center"><span class="tag-dot" aria-hidden="true"></span>Our Vision</p>
+                    <p class="vision-statement">
+                        Build a generation of youngsters full of hope, purpose and transformation.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CORE PROGRAMS (brief) ===== -->
+        <section id="programs-brief" class="programs-teaser" aria-labelledby="programs-brief-heading">
+            <div class="container">
+                <div class="section-head text-center">
+                    <p class="eyebrow justify-center"><span class="tag-dot" aria-hidden="true"></span>Our Core Programs</p>
+                    <h2 id="programs-brief-heading" class="section-title">What We <span class="accent">Offer</span></h2>
+                    <p class="section-sub">Holistic development for a generation that rises beyond limitations.</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-sm-6 col-lg-3">
+                        <a href="programs.html#academic" class="program-card fade-up">
+                            <span class="program-icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i></span>
+                            <h3>Academic Training</h3>
+                            <p>Study skills, content mastery and problem-based learning.</p>
+                            <span class="card-link">Learn More <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <a href="programs.html#talent" class="program-card fade-up">
+                            <span class="program-icon"><i class="fas fa-palette" aria-hidden="true"></i></span>
+                            <h3>Talent Development</h3>
+                            <p>Discovering and showcasing creative potential through mentorship.</p>
+                            <span class="card-link">Learn More <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <a href="programs.html#stem" class="program-card fade-up">
+                            <span class="program-icon"><i class="fas fa-microscope" aria-hidden="true"></i></span>
+                            <h3>STEM Engagement</h3>
+                            <p>Hands-on, project-based learning for future innovators.</p>
+                            <span class="card-link">Learn More <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <a href="programs.html#outreach" class="program-card fade-up">
+                            <span class="program-icon"><i class="fas fa-users" aria-hidden="true"></i></span>
+                            <h3>Community Outreach</h3>
+                            <p>Youth-led service projects with lasting social impact.</p>
+                            <span class="card-link">Learn More <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FLAGSHIP INITIATIVES ===== -->
+        <section class="initiatives-banner" aria-labelledby="initiatives-heading">
+            <div class="initiatives-banner-bg" aria-hidden="true"></div>
+            <div class="initiatives-banner-scrim" aria-hidden="true"></div>
+            <div class="container initiatives-banner-inner">
+                <p class="eyebrow eyebrow-light"><span class="tag-dot" aria-hidden="true"></span>Our Reach</p>
+                <h2 id="initiatives-heading" class="section-title on-dark">
+                    Driving <span class="accent-gold">Change</span> Across Africa
+                </h2>
+                <p class="hero-lead">A comprehensive range of programs designed to empower youth, families and communities.</p>
+            </div>
+        </section>
+
+        <section class="initiatives-list" aria-label="Our flagship initiatives">
+            <div class="container">
+                <div class="initiatives-grid">
+                    <div class="initiative-card fade-up">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <h6>Purpose &amp; Identity</h6>
+                        <p>Discipline, personal responsibility, character, values and leadership.</p>
+                    </div>
+                    <div class="initiative-card fade-up">
+                        <i class="fas fa-hand-holding-heart" aria-hidden="true"></i>
+                        <h6>Life Empowerment Initiatives</h6>
+                        <p>Life skills, mental health awareness, spiritual and moral mentorship, youth ministry.</p>
+                    </div>
+                    <div class="initiative-card fade-up">
+                        <i class="fas fa-laptop-code" aria-hidden="true"></i>
+                        <h6>Digital Skills &amp; Entrepreneurship</h6>
+                        <p>Digital literacy, innovation and entrepreneurial development.</p>
+                    </div>
+                    <div class="initiative-card fade-up">
+                        <i class="fas fa-tree" aria-hidden="true"></i>
+                        <h6>Environmental Conservation</h6>
+                        <p>Conservation and awareness campaigns.</p>
+                    </div>
+                    <div class="initiative-card fade-up">
+                        <i class="fas fa-paint-brush" aria-hidden="true"></i>
+                        <h6>Talent Development &amp; Creativity</h6>
+                        <p>Discovering, nurturing and showcasing talents.</p>
+                    </div>
+                    <div class="initiative-card fade-up">
+                        <i class="fas fa-people-roof" aria-hidden="true"></i>
+                        <h6>Family Empowerment Programs</h6>
+                        <p>Strengthening families for a better society.</p>
+                    </div>
+                    <div class="initiative-card fade-up">
+                        <i class="fas fa-flask" aria-hidden="true"></i>
+                        <h6>Academic Support &amp; STEM</h6>
+                        <p>Education support and STEM-based learning.</p>
+                    </div>
+                    <div class="initiative-card fade-up">
+                        <i class="fas fa-users-gear" aria-hidden="true"></i>
+                        <h6>Community Outreach &amp; Social Impact</h6>
+                        <p>Service initiatives and positive social impact.</p>
+                    </div>
+                    <div class="initiative-card fade-up">
+                        <i class="fas fa-heart-pulse" aria-hidden="true"></i>
+                        <h6>Public Health Education</h6>
+                        <p>Health education and wellness awareness.</p>
+                    </div>
+                    <div class="initiative-card fade-up">
+                        <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                        <h6>Entrepreneurial Innovation Fellowship</h6>
+                        <p>Empowering young innovators and entrepreneurs.</p>
+                    </div>
+                    <div class="initiative-card fade-up">
+                        <i class="fas fa-hand-holding-dollar" aria-hidden="true"></i>
+                        <h6>Family Centered Care Programs</h6>
+                        <p>Care, guidance and support for stable families.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PARTNERS / CTA ===== -->
+        <section id="partners" class="cta-photo" aria-labelledby="partners-heading">
+            <div class="cta-photo-bg" aria-hidden="true"></div>
+            <div class="cta-photo-scrim" aria-hidden="true"></div>
+            <div class="container cta-photo-inner text-center">
+                <h2 id="partners-heading" class="section-title on-dark">
+                    Join Us | Partner With Us |<br /><span class="accent-gold">Support The Vision</span>
+                </h2>
+                <p class="hero-lead cta-photo-lead">
+                    Schools, churches, organizations and volunteers &mdash; together, we can
+                    transform hope into impact.
+                </p>
+                <div class="hero-actions justify-center">
+                    <a href="get-involved.html" class="btn btn-primary-warm">
+                        <i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Become a Volunteer
+                    </a>
+                    <a href="contact.html" class="btn btn-outline-light">
+                        <i class="fas fa-handshake" aria-hidden="true"></i> Partner With Us
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer" role="contentinfo" aria-label="Site footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <img src="assets/img/logo.png" alt="" height="36" width="36" />
+                        <div>
+                            <span class="footer-name">YoungStars</span>
+                            <span class="footer-sub">Hope Foundation &mdash; Africa</span>
+                        </div>
+                    </div>
+                    <p class="footer-blurb">Empowering lives, inspiring dreams and transforming communities across Africa.</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="get-involved.html">Get Involved</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="programs.html#academic">Academic Training</a></li>
+                        <li><a href="programs.html#talent">Talent Development</a></li>
+                        <li><a href="programs.html#stem">STEM Engagement</a></li>
+                        <li><a href="programs.html#outreach">Community Outreach</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h4>Get In Touch</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone" aria-hidden="true"></i> +254 791 285 657</li>
+                        <li><i class="fas fa-phone" aria-hidden="true"></i> +254 112 366 543</li>
+                        <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Kitui / Nairobi, Kenya</li>
+                        <li><i class="fas fa-envelope" aria-hidden="true"></i> info@youngstarsafrica.org</li>
+                    </ul>
+                </div>
+            </div>
+            <hr />
+            <div class="footer-bottom">
+                <p>&copy; <span id="footer-year">2026</span> YoungStars Hope Foundation-Africa. All rights reserved.</p>
+                <p>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== DONATION MODAL ===== -->
+    <div class="modal fade" id="donationModal" tabindex="-1" aria-labelledby="donationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content donation-modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title" id="donationModalLabel">
+                        <i class="fas fa-heart" aria-hidden="true"></i> Support Our Mission
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close donation form"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="modal-intro">Your donation helps us empower youth across Africa. Thank you for your generosity.</p>
+
+                    <form id="donationForm" novalidate autocomplete="on">
+                        <div class="mb-3">
+                            <label class="form-label">Select Amount</label>
+                            <div class="amount-group">
+                                <button type="button" class="amount-btn" data-amount="500">KSh 500</button>
+                                <button type="button" class="amount-btn" data-amount="1000">KSh 1,000</button>
+                                <button type="button" class="amount-btn" data-amount="2500">KSh 2,500</button>
+                                <button type="button" class="amount-btn" data-amount="5000">KSh 5,000</button>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="customAmount" class="form-label">Or enter custom amount</label>
+                            <div class="input-group">
+                                <span class="input-group-text">KSh</span>
+                                <input type="number" id="customAmount" class="form-control" placeholder="e.g. 750" min="1" max="1000000" step="1" inputmode="numeric" />
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="donorPhone" class="form-label">Phone Number <span class="required">*</span></label>
+                            <input type="tel" id="donorPhone" class="form-control" placeholder="0712345678 or 254712345678"
+                                   required aria-describedby="phoneHelp" autocomplete="tel" inputmode="tel"
+                                   maxlength="13" pattern="^(0(7|1)[0-9]{8}|254(7|1)[0-9]{8})$" />
+                            <div id="phoneHelp" class="form-text">Enter the M-Pesa registered phone number.</div>
+                            <div class="invalid-feedback">Please enter a valid phone number (07XX or 2547XX).</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="donorName" class="form-label">Your Name (optional)</label>
+                            <input type="text" id="donorName" class="form-control" placeholder="e.g. Jane Muthoni" autocomplete="name" maxlength="80" />
+                        </div>
+
+                        <div class="honeypot" aria-hidden="true">
+                            <label for="honeypot">Leave this field empty</label>
+                            <input type="text" id="honeypot" name="honeypot" tabindex="-1" autocomplete="off" />
+                        </div>
+
+                        <button type="submit" class="btn btn-primary-warm w-100" id="donateSubmitBtn">
+                            <i class="fas fa-arrow-right" aria-hidden="true"></i> Donate Now
+                        </button>
+
+                        <div id="donationStatus" class="donation-status" role="status" aria-live="polite"></div>
+
+                        <hr />
+                        <p class="modal-fallback">
+                            <i class="fas fa-info-circle" aria-hidden="true"></i>
+                            Airtel / Telkom users: Pay via Paybill <strong>123456</strong> Account <strong>YOUNGSTARS</strong>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+    <script src="assets/js/main.min.js" defer></script>
+</body>
+</html>

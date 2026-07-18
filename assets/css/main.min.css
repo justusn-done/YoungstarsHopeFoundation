@@ -141,7 +141,11 @@ img { max-width: 100%; display: block; }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; }
 .brand { display: flex; align-items: center; gap: 0.7rem; }
 .brand-mark { border-radius: 8px; }
-.brand-text { display: flex; flex-direction: column; line-height: 1.1; }
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem; /* space between the two lines */
+}
 .brand-name {
     font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: var(--on-dark);
     transition: color 0.35s ease;
@@ -434,4 +438,851 @@ img { max-width: 100%; display: block; }
     .container { padding: 0 1.1rem; }
     .stat-cluster { grid-template-columns: 1fr; }
     .hero-facts { gap: 1rem; }
+}
+/* =========================================================
+   ABOUT PAGE ADDITIONS — append this whole block to the end
+   of your existing main.min.css (nothing here redefines or
+   overrides your current rules; it only adds new classes
+   used by about.html).
+
+   Requires these tokens to already exist in :root (they were
+   part of the shared design system used by index/programs):
+   --ink, --cream, --cream-deep, --terracotta, --gold, --on-dark,
+   --on-dark-muted, --text-muted, --radius-md, --radius-lg,
+   --shadow-soft, --shadow-lift, --font-display
+   If your main.min.css doesn't have those yet, ask and I'll
+   give you the token block too.
+   ========================================================= */
+
+/* ===== About page banner background (kept out of inline style for CSP) ===== */
+.banner-bg-about {
+    background-image: url('https://images.unsplash.com/photo-1548102249-acdce64fffbd?auto=format&fit=crop&w=1920&q=80');
+}
+
+/* ===== Feature chips (Who We Are) ===== */
+.feature-chips { display: flex; flex-wrap: wrap; gap: 1.6rem; margin-top: 2rem; }
+.feature-chip { display: flex; align-items: center; gap: 0.9rem; }
+.feature-chip-icon {
+    width: 46px; height: 46px; border-radius: 50%; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(185, 80, 42, 0.1); color: var(--terracotta); font-size: 1.05rem;
+}
+.feature-chip h6 { font-size: 0.95rem; font-weight: 700; color: var(--ink); margin: 0; }
+.feature-chip small { color: var(--text-muted); font-size: 0.82rem; }
+
+/* ===== About media + floating stat card ===== */
+.about-media-wrap { position: relative; }
+.about-media-wrap img {
+    width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lift);
+}
+.floating-stat-card {
+    position: absolute; left: -1.2rem; bottom: -1.6rem; right: -1.2rem;
+    margin: 0 1.6rem; background: #fff; border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lift); padding: 1.3rem 1rem;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.6rem;
+    border: 1px solid rgba(185, 80, 42, 0.08);
+}
+.mini-stat { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.mini-stat i { color: var(--terracotta); font-size: 1.1rem; margin-bottom: 0.4rem; }
+.mini-stat span { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: var(--ink); }
+.mini-stat small { color: var(--text-muted); font-size: 0.68rem; margin-top: 0.15rem; line-height: 1.2; }
+
+/* ===== Mission & vision band ===== */
+.mission-band { position: relative; padding: 7rem 0 5rem; overflow: hidden; background: var(--ink); }
+.mission-band-bg {
+    position: absolute; inset: 0; background-size: cover; background-position: center 25%;
+    background-image: url('https://images.unsplash.com/photo-1632215861513-130b66fe97f4?auto=format&fit=crop&w=1920&q=80');
+    opacity: 0.28;
+}
+.mission-band-scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(34,29,24,0.94) 0%, rgba(34,29,24,0.88) 100%); }
+.mission-band-inner { position: relative; z-index: 2; }
+.section-title.on-dark { color: var(--on-dark); }
+.accent-gold { color: var(--gold); font-style: italic; font-weight: 500; }
+.mission-lead { max-width: 640px; margin: 1.2rem auto 0; text-align: center; }
+.justify-center { justify-content: center; }
+
+.pillar-card {
+    background: rgba(246, 239, 226, 0.06); border: 1px solid rgba(246, 239, 226, 0.12);
+    border-radius: var(--radius-md); padding: 2rem 1.4rem; text-align: center; height: 100%;
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+.pillar-card:hover { transform: translateY(-4px); background: rgba(246, 239, 226, 0.1); }
+.pillar-card i { font-size: 1.7rem; color: var(--gold); }
+.pillar-card h6 { color: var(--on-dark); font-weight: 700; margin: 0.9rem 0 0.4rem; }
+.pillar-card p { color: var(--on-dark-muted); font-size: 0.88rem; margin: 0; }
+
+.vision-block { margin-top: 3.5rem; padding-top: 3rem; border-top: 1px solid rgba(246, 239, 226, 0.14); }
+.vision-statement {
+    font-family: var(--font-display); font-style: italic; font-weight: 500;
+    font-size: clamp(1.3rem, 2.6vw, 1.9rem); color: var(--on-dark); max-width: 700px; margin: 0.6rem auto 0;
+}
+
+/* ===== Flagship initiatives ===== */
+.initiatives-banner { position: relative; padding: 5.5rem 0; overflow: hidden; background: var(--ink); }
+.initiatives-banner-bg {
+    position: absolute; inset: 0; background-size: cover; background-position: center;
+    background-image: url('https://images.unsplash.com/photo-1655720348590-c739c860beed?auto=format&fit=crop&w=1920&q=80');
+    opacity: 0.32;
+}
+.initiatives-banner-scrim { position: absolute; inset: 0; background: linear-gradient(120deg, rgba(34,29,24,0.95) 0%, rgba(34,29,24,0.75) 100%); }
+.initiatives-banner-inner { position: relative; z-index: 2; max-width: 680px; }
+
+.initiatives-list { padding: 4.5rem 0 6.5rem; background: var(--cream-deep); }
+.initiatives-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.4rem;
+}
+.initiative-card {
+    background: #fff; border-radius: var(--radius-md); padding: 1.8rem 1.5rem;
+    box-shadow: var(--shadow-soft); border: 1px solid rgba(185, 80, 42, 0.07);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.initiative-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lift); }
+.initiative-card i { font-size: 1.4rem; color: var(--terracotta); }
+.initiative-card h6 { font-size: 1rem; font-weight: 700; color: var(--ink); margin: 0.9rem 0 0.5rem; }
+.initiative-card p { font-size: 0.86rem; color: var(--text-muted); margin: 0; }
+
+/* ===== CTA with photo background ===== */
+.cta-photo { position: relative; padding: 7rem 0; overflow: hidden; background: var(--ink); }
+.cta-photo-bg {
+    position: absolute; inset: 0; background-size: cover; background-position: center 30%;
+    background-image: url('https://images.unsplash.com/photo-1534597422092-8a84f1b45a9c?auto=format&fit=crop&w=1920&q=80');
+    opacity: 0.35;
+}
+.cta-photo-scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(34,29,24,0.9) 0%, rgba(185,80,42,0.55) 100%); }
+.cta-photo-inner { position: relative; z-index: 2; max-width: 760px; margin: 0 auto; }
+.cta-photo-lead { max-width: 560px; margin: 1.2rem auto 0; }
+
+/* ===== About page responsive tweaks ===== */
+@media (max-width: 991.98px) {
+    .initiatives-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 767.98px) {
+    .floating-stat-card { position: static; margin: 1.4rem 0 0; grid-template-columns: repeat(2, 1fr); }
+    .about-media-wrap { margin-bottom: 0; }
+    .mission-band, .cta-photo { padding: 4.5rem 0; }
+    .initiatives-banner { padding: 4rem 0; }
+    .initiatives-list { padding: 3rem 0 4rem; }
+    .initiatives-grid { grid-template-columns: 1fr; }
+    .pillar-card { margin-bottom: 0.5rem; }
+}
+/* =========================================================
+   TERMS OF SERVICE PAGE ADDITIONS — append to the end of
+   assets/css/main.min.css. Purely additive; nothing here
+   overrides existing rules.
+   ========================================================= */
+
+/* ===== No-photo banner variant (fast-loading legal pages) ===== */
+.page-banner.no-photo {
+    background: linear-gradient(135deg, var(--ink) 0%, #2E2115 100%);
+}
+.page-banner.no-photo .hero-scrim { background: none; }
+.legal-updated {
+    font-family: var(--font-mono); font-size: 0.8rem; color: var(--on-dark-muted);
+    margin-top: 1.2rem;
+}
+
+/* ===== Legal document layout ===== */
+.legal-section { padding: 5rem 0 6rem; background: var(--cream); }
+
+.legal-notice {
+    display: flex; gap: 0.9rem; align-items: flex-start;
+    background: var(--cream-deep); border: 1px solid rgba(185, 80, 42, 0.15);
+    border-radius: var(--radius-md); padding: 1.2rem 1.4rem; margin-bottom: 2.6rem;
+}
+.legal-notice i { color: var(--terracotta); margin-top: 0.2rem; }
+.legal-notice p { font-size: 0.88rem; color: var(--text-muted); margin: 0; }
+
+/* Table of contents (sticky on desktop) */
+.legal-toc { position: sticky; top: 6.5rem; }
+.legal-toc-title {
+    font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--terracotta); margin-bottom: 1rem;
+}
+.legal-toc ul { list-style: none; margin: 0; padding: 0; border-left: 2px solid rgba(185, 80, 42, 0.12); }
+.legal-toc-link {
+    display: block; padding: 0.4rem 0 0.4rem 1rem; margin-left: -2px; border-left: 2px solid transparent;
+    font-size: 0.86rem; color: var(--text-muted); transition: color 0.2s ease, border-color 0.2s ease;
+}
+.legal-toc-link:hover { color: var(--terracotta); }
+.legal-toc-link.is-active { color: var(--terracotta); border-left-color: var(--terracotta); font-weight: 700; }
+
+/* Document body */
+.legal-doc section { scroll-margin-top: 6.5rem; padding-bottom: 2.4rem; margin-bottom: 2.4rem; border-bottom: 1px solid rgba(34, 29, 24, 0.08); }
+.legal-doc section:last-child { border-bottom: none; margin-bottom: 0; }
+.legal-doc h2 {
+    font-size: 1.35rem; font-weight: 700; color: var(--ink); margin-bottom: 1rem;
+}
+.legal-doc p { color: var(--text-muted); margin-bottom: 1rem; line-height: 1.75; }
+.legal-doc p:last-child { margin-bottom: 0; }
+.legal-doc ul { color: var(--text-muted); padding-left: 1.3rem; margin-bottom: 1rem; line-height: 1.75; }
+.legal-doc li { margin-bottom: 0.5rem; }
+.legal-doc a { color: var(--terracotta); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+.legal-contact-list { list-style: none; padding: 0; }
+.legal-contact-list li { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.6rem; }
+.legal-contact-list i { color: var(--terracotta); width: 18px; }
+
+/* ===== Responsive ===== */
+@media (max-width: 991.98px) {
+    .legal-toc { position: static; margin-bottom: 2.5rem; border: 1px solid rgba(185,80,42,0.12); border-radius: var(--radius-md); padding: 1.2rem 1.4rem; }
+}
+@media (max-width: 767.98px) {
+    .legal-section { padding: 3.5rem 0 4rem; }
+    .legal-doc h2 { font-size: 1.18rem; }
+}
+/* =========================================================
+   PRIVACY PAGE ADDITIONS — append to the end of
+   assets/css/main.min.css.
+
+   Note: privacy.html reuses .page-banner.no-photo, .legal-section,
+   .legal-toc, .legal-doc, .legal-notice, .legal-contact-list, etc.
+   from terms.css — if you've already appended that file, you only
+   need the table styles below. If you haven't appended terms.css
+   yet, do that first or this page will look unstyled.
+   ========================================================= */
+
+.legal-table-wrap { overflow-x: auto; margin-bottom: 1.4rem; border-radius: var(--radius-md); border: 1px solid rgba(34, 29, 24, 0.08); }
+.legal-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; min-width: 560px; }
+.legal-table th, .legal-table td { padding: 0.9rem 1.1rem; text-align: left; vertical-align: top; }
+.legal-table thead th {
+    background: var(--cream-deep); font-family: var(--font-mono); font-size: 0.72rem;
+    letter-spacing: 0.06em; text-transform: uppercase; color: var(--terracotta);
+    border-bottom: 1px solid rgba(185, 80, 42, 0.15);
+}
+.legal-table tbody tr:not(:last-child) td { border-bottom: 1px solid rgba(34, 29, 24, 0.06); }
+.legal-table tbody td { color: var(--text-muted); }
+.legal-table tbody tr:hover td { background: rgba(185, 80, 42, 0.03); }
+/* =========================================================
+   EVENTS PAGE STYLES — YoungStars Hope Foundation-Africa
+   Merge this block into assets/css/main.min.css
+
+   Site palette (matches the rest of the project):
+     Primary (navy)   #0F172A
+     Secondary (green)#166534
+     Accent (gold)     #CA8A04
+     Background        #FFFFFF
+     Alt background     #F3F4F6
+     Body text          #1F2937
+
+   Only the photo hero (.page-banner) stays dark — it has its
+   own image backdrop and gradient, so white text there is
+   correct. Everything below it uses the light site theme so
+   text and cards actually read against the page background.
+   ========================================================= */
+
+/* ---------- Upcoming events section ---------- */
+.events-list {
+    background: linear-gradient(180deg, #ffffff 0%, #f8f6f0 100%);
+}
+
+.event-media {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+    background: #e5e7eb;
+    aspect-ratio: 16/10;
+}
+
+.event-media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0) 55%, rgba(15, 23, 42, 0.55) 100%);
+    pointer-events: none;
+}
+
+.event-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.event-card:hover .event-media img {
+    transform: scale(1.05);
+}
+.event-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 10px rgba(15, 23, 42, 0.06);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.event-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(202, 138, 4, 0.45);
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.14);
+}
+
+.event-body {
+    padding: 1.5rem;
+}
+
+.event-body h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.2rem;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+.event-body p {
+    color: #1f2937;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.event-meta {
+    font-size: 0.8rem !important;
+    color: #0f172a !important;
+    font-weight: 600;
+}
+
+.event-meta i {
+    margin-right: 0.4rem;
+    color: #ca8a04;
+}
+
+.card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #8a5c04;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: gap 0.3s ease, color 0.3s ease;
+}
+
+.card-link:hover {
+    gap: 0.8rem;
+    color: #166534;
+}
+
+.event-date-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #ca8a04;
+    border-radius: 12px;
+    padding: 0.4rem 0.8rem;
+    text-align: center;
+    min-width: 55px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.event-date-badge strong {
+    display: block;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    color: #0f172a;
+    font-family: 'Fraunces', serif;
+}
+
+.event-date-badge small {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #1f2937;
+    font-weight: 600;
+}
+
+/* ---------- Section heads (shared, light theme) ---------- */
+.section-sub {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #4b5563;
+}
+
+.section-title {
+    font-family: 'Fraunces', serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.section-title .accent {
+    color: #ca8a04;
+}
+
+/* ---------- Gallery / "Moments That Inspire Us" section ---------- */
+.highlights-band {
+    padding: 4rem 0;
+    background: #f3f4f6;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #e5e7eb;
+    aspect-ratio: 4/3;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(15, 23, 42, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.22);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+/* This overlay sits directly on the photo, not the page background,
+   so a dark gradient + white text stays correct here regardless of
+   the section behind it. */
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem 1.25rem 1.25rem;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.55) 45%, transparent 100%);
+    color: #ffffff;
+}
+
+.gallery-overlay h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    font-family: 'Fraunces', serif;
+    color: #ffffff;
+}
+
+.gallery-overlay p {
+    font-size: 0.85rem;
+    opacity: 0.92;
+    margin-bottom: 0;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.gallery-overlay .tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: #ca8a04;
+    color: #0f172a;
+    font-weight: 700;
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    margin-bottom: 0.5rem;
+}
+
+.view-gallery-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 2rem;
+    padding: 0.8rem 2.2rem;
+    background: #ca8a04;
+    color: #ffffff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 14px rgba(202, 138, 4, 0.3);
+    transition: all 0.3s ease;
+    font-family: 'Karla', sans-serif;
+}
+
+.view-gallery-btn:hover {
+    background: #0f172a;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.3);
+}
+
+.view-gallery-btn i {
+    transition: transform 0.3s ease;
+}
+
+.view-gallery-btn:hover i {
+    transform: translateX(4px);
+}
+
+/* ---------- CTA section ---------- */
+.cta-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #fdf6e3 0%, #ffffff 60%);
+}
+
+.btn-primary-warm {
+    background: #ca8a04;
+    color: #ffffff;
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-warm:hover {
+    background: #0f172a;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.25);
+}
+
+.btn-outline-dark {
+    background: transparent;
+    color: #0f172a;
+    border: 2px solid #0f172a;
+    padding: 0.7rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-dark:hover {
+    background: #0f172a;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.contact-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    padding: 2rem;
+    color: #1f2937;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+}
+
+.contact-card h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+    color: #0f172a;
+}
+
+.contact-card p {
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    color: #1f2937;
+}
+
+.contact-card p i {
+    width: 1.5rem;
+    color: #ca8a04;
+}
+
+.text-link {
+    color: #8a5c04;
+    text-decoration: none;
+    font-weight: 600;
+    transition: gap 0.3s ease, color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.text-link:hover {
+    gap: 0.8rem;
+    color: #166534;
+}
+
+.lede {
+    font-size: 1.1rem;
+    color: #4b5563;
+    max-width: 500px;
+}
+
+/* ---------- Page banner / hero (kept dark — has its own photo backdrop) ---------- */
+.page-banner {
+    position: relative;
+    padding: 5rem 0 4rem;
+    overflow: hidden;
+    min-height: 400px;
+}
+
+.banner-bg-events {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(135deg, rgba(10, 10, 20, 0.88) 0%, rgba(20, 14, 8, 0.82) 100%),
+        url('https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    background-blend-mode: overlay;
+    z-index: 0;
+}
+
+.hero-scrim {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 50%, rgba(202, 138, 4, 0.1) 0%, transparent 70%);
+    z-index: 1;
+}
+
+.banner-constellation {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    opacity: 0.35;
+    z-index: 1;
+}
+
+.banner-inner {
+    position: relative;
+    z-index: 2;
+}
+
+.breadcrumb {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.breadcrumb a {
+    color: #f0c14b;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.breadcrumb span {
+    margin: 0 0.5rem;
+}
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #f0c14b;
+    margin-bottom: 0.5rem;
+}
+
+.eyebrow-light {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.eyebrow.justify-center {
+    justify-content: center;
+}
+
+.tag-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #f0c14b;
+}
+
+.page-title {
+    font-family: 'Fraunces', serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+.page-title em {
+    color: #f0c14b;
+    font-style: normal;
+}
+
+.hero-lead {
+    font-size: 1.15rem;
+    max-width: 550px;
+    color: rgba(255, 255, 255, 0.88);
+    line-height: 1.7;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2.2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .banner-constellation {
+        width: 60%;
+        opacity: 0.18;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .event-date-badge strong {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+    }
+
+    .gallery-overlay h4 {
+        font-size: 0.9rem;
+    }
+
+    .gallery-overlay p {
+        font-size: 0.7rem;
+    }
+
+    .event-body {
+        padding: 1rem;
+    }
+
+    .contact-card {
+        padding: 1.25rem;
+    }
+}
+
+/* =========================================================
+   GET INVOLVED PAGE ADDITIONS — append to the end of
+   assets/css/main.min.css. Purely additive; nothing here
+   overrides existing rules.
+
+   Note: reuses .page-banner, .hero-bg, .hero-scrim, .program-card,
+   .card-link, .fade-up, .form-control, .honeypot, .is-invalid,
+   .required, .accent-gold, .section-title from earlier in the
+   file — only the classes new to get-involved.html are defined
+   below.
+   ========================================================= */
+
+/* ===== Get Involved banner background ===== */
+.banner-bg-involved {
+    background-image: url('https://images.unsplash.com/photo-1652971876875-05db98fab376?auto=format&fit=crop&w=1920&q=80');
+}
+
+/* ===== "Donate" option card rendered as a <button> ===== */
+.option-card-btn {
+    background: #fff; border: 1px solid rgba(185, 80, 42, 0.06); text-align: left;
+    font-family: inherit; cursor: pointer; width: 100%;
+}
+
+/* ===== Volunteer section image =====
+   The form beside it runs long (6 fields + textarea + consent),
+   so instead of guessing a height, the left column becomes a
+   flex column: heading/lede take their natural height, then the
+   image flex-grows to fill exactly what's left — so its bottom
+   edge always lines up with the form panel's bottom edge, no
+   matter how tall the form ends up being. */
+.volunteer-row { align-items: stretch; }
+.volunteer-copy-col { display: flex; flex-direction: column; }
+.volunteer-media-wrap { flex: 1 1 auto; display: flex; margin-top: 2rem; min-height: 320px; }
+.volunteer-media-wrap img {
+    width: 100%; height: 100%; object-fit: cover;
+    border-radius: var(--radius-lg); box-shadow: var(--shadow-lift);
+}
+
+/* ===== Volunteer application form panel ===== */
+.form-panel {
+    background: #fff; border-radius: var(--radius-lg); padding: 2.4rem 2.2rem;
+    box-shadow: var(--shadow-soft); border: 1px solid rgba(185, 80, 42, 0.08);
+}
+.form-select {
+    background: #fff; border: 1px solid rgba(34,29,24,0.15); color: var(--text); border-radius: var(--radius-sm);
+}
+.form-select:focus { border-color: var(--terracotta); box-shadow: 0 0 0 3px rgba(185, 80, 42, 0.14); }
+.form-check { display: flex; align-items: flex-start; gap: 0.6rem; }
+.form-check-input {
+    width: 1.05em; height: 1.05em; margin-top: 0.2em; border: 1.5px solid rgba(34,29,24,0.25);
+    flex-shrink: 0;
+}
+.form-check-input:checked { background-color: var(--terracotta); border-color: var(--terracotta); }
+.form-check-input:focus { border-color: var(--terracotta); box-shadow: 0 0 0 3px rgba(185, 80, 42, 0.14); }
+.form-check-label { font-size: 0.86rem; color: var(--text-muted); }
+
+/* Generic inline status message for the volunteer + newsletter forms
+   (same visual language as .donation-status). */
+.form-status { margin-top: 1rem; font-size: 0.92rem; min-height: 1.2rem; }
+.form-status.success { color: var(--forest); }
+.form-status.error { color: var(--terracotta-deep); }
+.form-status-center { text-align: center; }
+
+/* ===== Newsletter band =====
+   Deliberately not var(--ink) flat — that's the footer's color,
+   and the two dark sections sit back-to-back on this page. This
+   uses the warm terracotta gradient instead (same family as
+   .cta-photo-scrim / .btn-primary-warm) so it reads as its own
+   section rather than bleeding into the footer below it. */
+.newsletter-band {
+    padding: 6.5rem 0; position: relative; overflow: hidden;
+    background: linear-gradient(135deg, var(--terracotta) 0%, var(--terracotta-deep) 60%, var(--ink) 130%);
+}
+.newsletter-card {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 2.5rem;
+    background: rgba(246, 239, 226, 0.08); border: 1px solid rgba(246, 239, 226, 0.18);
+    border-radius: var(--radius-lg); padding: 3rem 3.2rem;
+}
+.newsletter-copy { flex: 1 1 380px; }
+.newsletter-lead { margin-top: 1rem; max-width: 460px; }
+.newsletter-form { flex: 1 1 340px; display: flex; flex-direction: column; gap: 0.9rem; max-width: 400px; }
+.newsletter-form .form-control {
+    background: rgba(246, 239, 226, 0.08); border-color: rgba(246, 239, 226, 0.2); color: var(--on-dark);
+}
+.newsletter-form .form-control::placeholder { color: var(--on-dark-muted); }
+.newsletter-form .form-control:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(214, 161, 60, 0.18); }
+.newsletter-fineprint {
+    text-align: center; color: var(--on-dark-muted); font-size: 0.78rem; margin-top: 1.4rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 991.98px) {
+    .newsletter-card { padding: 2.4rem; }
+}
+@media (max-width: 767.98px) {
+    .newsletter-band { padding: 4.5rem 0; }
+    .newsletter-card { padding: 2rem 1.6rem; flex-direction: column; align-items: stretch; }
+    .newsletter-form { max-width: none; }
+    .form-panel { padding: 1.8rem 1.5rem; }
+}
+.banner-bg-gallery {
+    background-image: url('https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1920&q=80');
 }
