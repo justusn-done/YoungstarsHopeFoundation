@@ -1387,3 +1387,983 @@ img { max-width: 100%; display: block; }
     .faq-accordion .accordion-button { padding: 1.1rem 1.2rem; font-size: 0.96rem; }
     .faq-accordion .accordion-body { padding: 0 1.2rem 1.2rem; }
 }
+/* =========================================================
+   YoungStars Hope Foundation-Africa — donate.css
+   Dedicated stylesheet for donate.html ONLY.
+
+   Load order matters: this file assumes assets/css/main.min.css
+   is already loaded on the page, since it uses the design tokens
+   (--terracotta, --ink, --cream, --font-display, --radius-*, etc.)
+   defined in that file's :root block, plus these shared classes
+   from main.min.css: .site-header, .site-footer, .btn-donate,
+   .btn-primary-warm, .btn-outline-dark, .form-control, .form-check*,
+   .form-status, .honeypot, .required, .eyebrow, .tag-dot,
+   .section-title, .section-sub, .accent, .fade-up, .visually-hidden.
+
+   Everything below is specific to the donate page: hero, stats,
+   story cards, impact breakdown bars, donation method panels,
+   testimonial slider, and the mini FAQ accordion skin.
+   ========================================================= */
+
+/* =========================================================
+   1. HERO
+   ========================================================= */
+.donate-hero {
+    position: relative;
+    min-height: 78vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 8rem 0 5rem;
+}
+
+.donate-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1473649085228-583485e6e4d7?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center 30%;
+    transform: scale(1.02);
+}
+
+.donate-hero-scrim {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(15, 12, 10, 0.55) 0%, rgba(15, 12, 10, 0.72) 55%, rgba(15, 12, 10, 0.88) 100%);
+}
+
+.donate-hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 760px;
+}
+
+.donate-hero-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--on-dark);
+    font-size: clamp(2.4rem, 5.5vw, 4rem);
+    line-height: 1.08;
+    margin: 0.9rem 0 1.4rem;
+}
+
+.donate-hero-title em {
+    font-style: italic;
+    color: var(--gold);
+}
+
+.donate-hero-lead {
+    color: var(--on-dark-muted);
+    font-size: 1.08rem;
+    line-height: 1.75;
+    max-width: 620px;
+    margin-bottom: 2.2rem;
+}
+
+.donate-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.btn-outline-light {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    border: 1.5px solid rgba(246, 239, 226, 0.5);
+    color: var(--on-dark);
+    background: transparent;
+    border-radius: 999px;
+    padding: 0.85rem 1.8rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+.btn-outline-light:hover {
+    background: rgba(246, 239, 226, 0.12);
+    border-color: rgba(246, 239, 226, 0.85);
+    color: var(--on-dark);
+}
+
+/* =========================================================
+   2. IMPACT STATS
+   ========================================================= */
+.donate-stats {
+    background: var(--ink);
+    padding: 3rem 0;
+    border-bottom: 1px solid rgba(246, 239, 226, 0.08);
+}
+
+.donate-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    text-align: center;
+}
+
+.donate-stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.donate-stat-num {
+    font-family: var(--font-mono);
+    font-size: clamp(1.9rem, 3.6vw, 2.7rem);
+    font-weight: 500;
+    color: var(--gold);
+}
+
+.donate-stat-label {
+    font-size: 0.82rem;
+    letter-spacing: 0.03em;
+    color: var(--on-dark-muted);
+}
+
+/* =========================================================
+   3. STORY CARDS
+   ========================================================= */
+.donate-stories {
+    padding: 7rem 0;
+    background: var(--cream);
+}
+
+.donate-story-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.donate-story-card {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    background: #fff;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(185, 80, 42, 0.08);
+}
+
+.donate-story-card:nth-child(even) {
+    grid-template-columns: 1fr 320px;
+}
+.donate-story-card:nth-child(even) .donate-story-media {
+    order: 2;
+}
+
+.donate-story-media { position: relative; min-height: 260px; }
+.donate-story-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.donate-story-body {
+    padding: 2.2rem 2.4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.donate-story-tag {
+    align-self: flex-start;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    background: rgba(185, 80, 42, 0.08);
+    border-radius: 999px;
+    padding: 0.3rem 0.8rem;
+    margin-bottom: 0.9rem;
+}
+
+.donate-story-body h3 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+}
+
+.donate-story-teaser {
+    color: var(--text-muted);
+    font-size: 0.98rem;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+.donate-story-full {
+    color: var(--text-muted);
+    font-size: 0.96rem;
+    line-height: 1.75;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.45s ease, opacity 0.35s ease, margin 0.45s ease;
+    margin-top: 0;
+}
+
+.donate-story-full p:last-child { margin-bottom: 0; }
+
+.donate-story-card.is-open .donate-story-full {
+    max-height: 900px;
+    opacity: 1;
+    margin-top: 1rem;
+}
+
+.donate-story-card.is-open .donate-story-teaser {
+    display: none;
+}
+
+.donate-story-toggle {
+    align-self: flex-start;
+    margin-top: 1.4rem;
+    background: none;
+    border: none;
+    padding: 0;
+    color: var(--terracotta);
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+.donate-story-toggle:hover { color: var(--terracotta-deep); }
+.donate-story-toggle i { transition: transform 0.3s ease; font-size: 0.78rem; }
+.donate-story-card.is-open .donate-story-toggle i { transform: rotate(180deg); }
+
+/* =========================================================
+   4. IMPACT BREAKDOWN BARS
+   ========================================================= */
+.donate-breakdown {
+    padding: 6.5rem 0;
+    background: #fff;
+}
+
+.donate-breakdown-bars {
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.donate-bar-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.55rem;
+}
+
+.donate-bar-pct {
+    font-family: var(--font-mono);
+    color: var(--terracotta);
+}
+
+.donate-bar-track {
+    width: 100%;
+    height: 10px;
+    background: rgba(34, 29, 24, 0.08);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.donate-bar-fill {
+    height: 100%;
+    width: 0%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--terracotta) 0%, var(--gold) 100%);
+    transition: width 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* =========================================================
+   5. DONATION METHOD PANELS
+   ========================================================= */
+.donate-methods {
+    padding: 7rem 0;
+    background: var(--cream);
+}
+
+.donate-methods-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    max-width: 1040px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+.donate-panel {
+    background: #fff;
+    border-radius: var(--radius-lg);
+    padding: 2.6rem;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(185, 80, 42, 0.08);
+}
+
+.donate-panel h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.5rem;
+}
+.donate-panel h3 i { color: var(--terracotta); }
+
+.donate-panel-sub {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    margin-bottom: 1.6rem;
+}
+
+/* Amount selector — same visual language as the old donation modal */
+.donate-amount-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.7rem;
+    margin-bottom: 1.4rem;
+}
+
+.donate-amount-btn {
+    padding: 0.75rem 0.5rem;
+    border-radius: var(--radius-sm);
+    border: 1.5px solid rgba(34, 29, 24, 0.15);
+    background: #fff;
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: var(--ink);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.donate-amount-btn:hover { border-color: var(--terracotta); color: var(--terracotta); }
+.donate-amount-btn.is-active {
+    background: var(--terracotta);
+    border-color: var(--terracotta);
+    color: #fff;
+}
+
+/* Paybill card */
+.donate-paybill-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background: var(--cream);
+    border-radius: var(--radius-sm);
+    padding: 1rem 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.donate-paybill-field { display: flex; flex-direction: column; gap: 0.15rem; }
+.donate-paybill-label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+}
+.donate-paybill-value {
+    font-family: var(--font-mono);
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: 0.03em;
+}
+
+.donate-copy-btn {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    background: #fff;
+    border: 1.5px solid rgba(34, 29, 24, 0.15);
+    border-radius: 999px;
+    padding: 0.55rem 1.1rem;
+    font-size: 0.84rem;
+    font-weight: 600;
+    color: var(--ink);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 96px;
+    justify-content: center;
+}
+.donate-copy-btn:hover { border-color: var(--terracotta); color: var(--terracotta); }
+.donate-copy-btn.is-copied {
+    background: var(--forest);
+    border-color: var(--forest);
+    color: #fff;
+}
+
+.donate-paybill-steps {
+    margin: 1.6rem 0 1.4rem;
+    padding-left: 1.2rem;
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    line-height: 1.9;
+}
+.donate-paybill-steps strong { color: var(--ink); }
+
+.donate-paybill-note {
+    font-size: 0.86rem;
+    color: var(--text-muted);
+    margin: 0;
+    padding-top: 1.2rem;
+    border-top: 1px solid rgba(34, 29, 24, 0.08);
+}
+.donate-paybill-note a { color: var(--terracotta); font-weight: 600; }
+
+/* =========================================================
+   6. TESTIMONIAL SLIDER
+   ========================================================= */
+.donate-testimonials {
+    padding: 6.5rem 0;
+    background: #fff;
+}
+
+.donate-testimonial-slider {
+    max-width: 720px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.donate-testimonial-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.donate-testimonial-slide {
+    flex: 0 0 100%;
+    text-align: center;
+    padding: 0 1.5rem;
+    margin: 0;
+}
+
+.donate-testimonial-slide p {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: var(--ink);
+    margin-bottom: 1.2rem;
+}
+
+.donate-testimonial-slide cite {
+    font-style: normal;
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    letter-spacing: 0.03em;
+    color: var(--terracotta);
+}
+
+.donate-testimonial-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.4rem;
+    margin-top: 2.2rem;
+}
+
+.donate-testimonial-arrow {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(34, 29, 24, 0.15);
+    background: #fff;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.donate-testimonial-arrow:hover { border-color: var(--terracotta); color: var(--terracotta); }
+
+.donate-testimonial-dots { display: flex; gap: 0.55rem; }
+.donate-testimonial-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: rgba(34, 29, 24, 0.18);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+.donate-testimonial-dot.is-active {
+    background: var(--terracotta);
+    transform: scale(1.2);
+}
+
+/* =========================================================
+   7. DONATION MINI-FAQ
+   ========================================================= */
+.donate-faq {
+    padding: 6rem 0 7rem;
+    background: var(--cream);
+}
+
+.donate-faq-accordion {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.donate-faq-accordion .accordion-item {
+    background: #fff;
+    border: 1px solid rgba(185, 80, 42, 0.1);
+    border-radius: var(--radius-md) !important;
+    margin-bottom: 0.8rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+}
+
+.donate-faq-accordion .accordion-button {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.98rem;
+    color: var(--ink);
+    padding: 1.15rem 1.5rem;
+    background: #fff;
+    box-shadow: none;
+}
+.donate-faq-accordion .accordion-button:not(.collapsed) {
+    color: var(--terracotta-deep);
+    background: rgba(185, 80, 42, 0.04);
+}
+.donate-faq-accordion .accordion-button:focus {
+    box-shadow: 0 0 0 3px rgba(185, 80, 42, 0.14);
+    border-color: transparent;
+}
+.donate-faq-accordion .accordion-button::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23B9502A'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+}
+.donate-faq-accordion .accordion-body {
+    padding: 0 1.5rem 1.35rem;
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    line-height: 1.7;
+}
+.donate-faq-accordion .accordion-body a { color: var(--terracotta); font-weight: 600; }
+
+/* =========================================================
+   8. RESPONSIVE
+   ========================================================= */
+@media (max-width: 991.98px) {
+    .donate-stats-grid { grid-template-columns: repeat(2, 1fr); row-gap: 2.2rem; }
+
+    .donate-story-card,
+    .donate-story-card:nth-child(even) {
+        grid-template-columns: 1fr;
+    }
+    .donate-story-card:nth-child(even) .donate-story-media { order: 0; }
+    .donate-story-media { min-height: 220px; }
+
+    .donate-methods-grid { grid-template-columns: 1fr; max-width: 560px; }
+}
+
+@media (max-width: 767.98px) {
+    .donate-hero { min-height: auto; padding: 7rem 0 4rem; }
+    .donate-hero-actions { flex-direction: column; align-items: stretch; }
+    .donate-hero-actions .btn { justify-content: center; text-align: center; }
+
+    .donate-stories { padding: 4.5rem 0; }
+    .donate-story-body { padding: 1.6rem 1.5rem; }
+
+    .donate-breakdown { padding: 4.5rem 0; }
+    .donate-methods { padding: 4.5rem 0; }
+    .donate-panel { padding: 1.8rem 1.5rem; }
+    .donate-amount-group { grid-template-columns: repeat(2, 1fr); }
+
+    .donate-paybill-row { flex-direction: column; align-items: stretch; text-align: center; }
+    .donate-copy-btn { width: 100%; }
+
+    .donate-testimonials { padding: 4.5rem 0; }
+    .donate-testimonial-slide p { font-size: 1.1rem; }
+
+    .donate-faq { padding: 4rem 0 4.5rem; }
+}
+/* =========================================================
+   YoungStars Hope Foundation-Africa — team.css
+   Dedicated stylesheet for team.html ONLY.
+
+   Load order matters: this file assumes assets/css/main.min.css
+   is already loaded on the page, since it uses the design tokens
+   (--terracotta, --ink, --cream, --font-display, --radius-*, etc.)
+   defined in that file's :root block, plus these shared classes
+   from main.min.css: .site-header, .site-footer, .page-banner,
+   .hero-scrim, .banner-constellation, .breadcrumb, .eyebrow,
+   .tag-dot, .section-title, .section-sub, .accent, .fade-up,
+   .visually-hidden.
+
+   Everything below is specific to the team page: the banner
+   image, the 3D flip-card grid, the executive-board role cards,
+   and the closing commitment band.
+   ========================================================= */
+
+.banner-bg-team {
+    background-image: url('https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1920&q=80');
+}
+
+/* =========================================================
+   1. FLIP-CARD GRID
+   ========================================================= */
+.team-grid-section { padding: 6.5rem 0 7rem; background: var(--cream); }
+
+.team-flip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
+    justify-content: center;
+    gap: 2.2rem;
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+/* Perspective lives on the outer card; the inner element is what
+   actually rotates, so both faces can be positioned absolutely
+   inside it and hidden via backface-visibility. */
+.team-flip-card {
+    perspective: 1600px;
+    height: 380px;
+    cursor: pointer;
+    outline: none;
+}
+
+.team-flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+/* Hover flips on devices that support hover (desktop/trackpad).
+   Touch devices get a tap-to-flip via the .is-flipped class,
+   added by team.js — see the JS file for the touch fallback. */
+.team-flip-card:hover .team-flip-inner,
+.team-flip-card:focus-within .team-flip-inner,
+.team-flip-card.is-flipped .team-flip-inner {
+    transform: rotateY(180deg);
+}
+
+.team-flip-card:focus-visible,
+.team-flip-readmore:focus-visible {
+    box-shadow: 0 0 0 3px rgba(185, 80, 42, 0.35);
+    border-radius: var(--radius-lg);
+}
+
+.team-flip-face {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: var(--radius-lg);
+    padding: 2.4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+}
+
+.team-flip-front {
+    background: #fff;
+    border: 1px solid rgba(185, 80, 42, 0.1);
+}
+
+.team-flip-back {
+    background: linear-gradient(150deg, var(--terracotta) 0%, var(--terracotta-deep) 100%);
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+.team-flip-avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--terracotta) 0%, var(--terracotta-deep) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 1.2rem;
+}
+
+/* If a real <img> replaces the initials placeholder, it should
+   still fill this same circular frame. */
+.team-flip-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.team-flip-front h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.team-flip-role {
+    color: var(--terracotta);
+    font-size: 0.88rem;
+    font-weight: 600;
+    margin-bottom: 1.4rem;
+}
+
+.team-flip-hint {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+.team-flip-hint i { font-size: 0.7rem; }
+
+.team-flip-quote-icon {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 0.8rem;
+}
+
+.team-flip-quote {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.02rem;
+    line-height: 1.65;
+    margin-bottom: 1.6rem;
+}
+
+.team-flip-readmore {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    border-radius: 999px;
+    padding: 0.6rem 1.3rem;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.86rem;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+.team-flip-readmore:hover {
+    background: rgba(255, 255, 255, 0.24);
+    border-color: rgba(255, 255, 255, 0.7);
+    color: #fff;
+}
+
+/* =========================================================
+   2. EXECUTIVE BOARD ROLE CARDS
+   ========================================================= */
+.board-roles-section { padding: 0 0 7rem; background: var(--cream); }
+
+.board-roles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.board-role-card {
+    background: #fff;
+    border-radius: var(--radius-lg);
+    padding: 2rem 1.8rem;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(185, 80, 42, 0.08);
+    position: relative;
+}
+
+.board-role-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(185, 80, 42, 0.08);
+    color: var(--terracotta);
+    font-family: var(--font-mono);
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.board-role-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.9rem;
+}
+
+.board-role-card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+}
+
+.board-role-card li {
+    position: relative;
+    padding-left: 1.1rem;
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    line-height: 1.55;
+}
+.board-role-card li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--terracotta);
+}
+
+/* Patron sits apart conceptually from the six executive roles, so
+   it spans the full row and gets a slightly different accent. */
+.board-role-card-patron {
+    grid-column: 1 / -1;
+    background: var(--ink);
+    border-color: transparent;
+}
+.board-role-card-patron .board-role-num {
+    background: rgba(214, 161, 60, 0.16);
+    color: var(--gold);
+}
+.board-role-card-patron h3 { color: var(--on-dark); }
+.board-role-card-patron li { color: var(--on-dark-muted); }
+.board-role-card-patron li::before { background: var(--gold); }
+.board-role-card-patron ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    row-gap: 0.55rem;
+}
+
+/* =========================================================
+   3. COMMITMENT BAND
+   ========================================================= */
+.commitment-band {
+    background: var(--ink);
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.commitment-text {
+    max-width: 760px;
+    margin: 0 auto 1.4rem;
+    color: var(--on-dark-muted);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.commitment-theme {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 600;
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    color: var(--gold);
+    margin: 0;
+}
+
+/* =========================================================
+   4. RESPONSIVE
+   ========================================================= */
+@media (max-width: 991.98px) {
+    .board-roles-grid { grid-template-columns: repeat(2, 1fr); }
+    .board-role-card-patron ul { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 767.98px) {
+    .team-grid-section { padding: 4.5rem 0 5rem; }
+    .team-flip-card { height: 340px; }
+    .team-flip-face { padding: 1.8rem 1.5rem; }
+
+    .board-roles-section { padding: 0 0 4.5rem; }
+    .board-roles-grid { grid-template-columns: 1fr; }
+
+    .commitment-band { padding: 3.5rem 0; }
+    .commitment-text { font-size: 0.94rem; }
+}
+/* ===== Team teaser (about.html) ===== */
+.team-teaser { padding: 4rem 0; background: var(--cream); }
+.team-teaser-inner {
+    display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;
+    background: #fff; border-radius: var(--radius-lg); padding: 2.4rem 2.8rem;
+    box-shadow: var(--shadow-soft); border: 1px solid rgba(185, 80, 42, 0.08);
+}
+.team-teaser-avatar {
+    flex-shrink: 0; width: 84px; height: 84px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--terracotta) 0%, var(--terracotta-deep) 100%);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; color: #fff;
+}
+.team-teaser-text { flex: 1 1 380px; }
+.team-teaser-text .eyebrow { margin-bottom: 0.5rem; }
+.team-teaser-text .section-title { font-size: 1.6rem; margin-bottom: 0.5rem; }
+.team-teaser-text .lede { margin-bottom: 0; }
+.team-teaser-btn { flex-shrink: 0; white-space: nowrap; }
+
+@media (max-width: 767.98px) {
+    .team-teaser-inner { padding: 1.8rem; text-align: center; flex-direction: column; }
+    .team-teaser-btn { width: 100%; justify-content: center; }
+}
+
+/* ===== James Mutie bio page (james-mutie.html) ===== */
+.founder-header { background: var(--ink); padding: 7.5rem 0 3.5rem; text-align: center; }
+.breadcrumb-on-dark, .breadcrumb-on-dark a { color: var(--on-dark-muted); }
+.breadcrumb-on-dark a:hover { color: var(--gold); }
+.breadcrumb-on-dark span { margin: 0 0.5rem; }
+
+.founder-avatar-lg {
+    width: 128px; height: 128px; border-radius: 50%; margin: 1.6rem auto 1.4rem;
+    background: linear-gradient(135deg, var(--terracotta) 0%, var(--terracotta-deep) 100%);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-weight: 700; font-size: 2.6rem; color: #fff;
+}
+.founder-avatar-lg img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+
+.founder-name { font-family: var(--font-display); font-weight: 700; color: var(--on-dark); font-size: clamp(1.8rem, 3.5vw, 2.6rem); margin-bottom: 0.5rem; }
+.founder-title { color: var(--gold); font-size: 0.95rem; font-weight: 600; margin: 0; }
+
+.founder-article-section { background: #fff; padding: 5rem 0 6.5rem; }
+.founder-article { max-width: 720px; margin: 0 auto; }
+.founder-article h2 {
+    font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--ink);
+    margin: 2.6rem 0 1.2rem;
+}
+.founder-article h2:first-child { margin-top: 0; }
+.founder-article p { color: var(--text-muted); font-size: 1rem; line-height: 1.85; margin-bottom: 1.3rem; }
+.founder-article-divider { border: none; border-top: 1px solid rgba(34, 29, 24, 0.1); margin: 3rem 0; }
+.founder-article-emphasis {
+    font-family: var(--font-display); font-style: italic; font-size: 1.2rem; color: var(--terracotta-deep);
+    border-left: 3px solid var(--terracotta); padding-left: 1.2rem; margin: 1.8rem 0;
+}
+.founder-signature { font-family: var(--font-display); font-style: italic; font-size: 1.05rem; color: var(--ink); margin-top: 2rem; }
+.founder-article-back { margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid rgba(34, 29, 24, 0.1); }
+
+@media (max-width: 767.98px) {
+    .founder-header { padding: 6.5rem 0 3rem; }
+    .founder-avatar-lg { width: 100px; height: 100px; font-size: 2rem; }
+    .founder-article-section { padding: 3.5rem 0 4.5rem; }
+    .founder-article h2 { font-size: 1.3rem; }
+}

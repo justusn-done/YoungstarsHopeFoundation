@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ===== SECURITY HEADERS ===== -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://fonts.googleapis.com; img-src 'self' https://images.unsplash.com data:; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; frame-ancestors 'self'; upgrade-insecure-requests;" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <title>Donate | YoungStars Hope Foundation-Africa</title>
+    <meta name="description" content="Your gift becomes their story. Donate to YoungStars Hope Foundation-Africa via M-Pesa or Paybill and read the real stories your support makes possible." />
+    <link rel="canonical" href="https://youngstarsafrica.org/donate.html" />
+
+    <meta property="og:title" content="Donate | YoungStars Hope Foundation-Africa" />
+    <meta property="og:description" content="Your gift becomes their story. Donate via M-Pesa or Paybill." />
+    <meta property="og:image" content="https://youngstarsafrica.org/assets/img/og-image.jpg" />
+    <meta property="og:url" content="https://youngstarsafrica.org/donate.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- ===== PERFORMANCE ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+
+    <!-- Preload the banner photo — it's the largest paint on this page -->
+    <link rel="preload" as="image" fetchpriority="high"
+          href="https://images.unsplash.com/photo-1473649085228-583485e6e4d7?auto=format&fit=crop&w=1920&q=80" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Karla:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <!-- Shared site styles first (design tokens, header, footer) -->
+    <link rel="stylesheet" href="assets/css/main.min.css" />
+    <!-- Dedicated stylesheet for this page only -->
+    <link rel="stylesheet" href="assets/css/donate.css" />
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ===== HEADER ===== -->
+    <header class="site-header" id="header" role="banner" aria-label="Site header">
+        <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+            <div class="container nav-inner">
+                <a class="brand" href="index.html" aria-label="YoungStars Hope Foundation-Africa home">
+                    <img src="assets/img/logo.png" alt="" height="44" width="44" class="brand-mark" />
+                    <span class="brand-text">
+                        <span class="brand-name">YoungStars</span>
+                        <span class="brand-sub me-4">Hope Foundation &mdash; Africa</span>
+                    </span>
+                </a>
+
+                <button class="nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation menu">
+                    <span></span><span></span><span></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="nav-links">
+                        <li><a class="nav-link" href="index.html">Home</a></li>
+                        <li><a class="nav-link" href="about.html">About</a></li>
+                        <li><a class="nav-link" href="programs.html">Programs</a></li>
+                        <li><a class="nav-link" href="get-involved.html">Get Involved</a></li>
+                        <li><a class="nav-link" href="events.html">Events</a></li>
+                        <li><a class="nav-link" href="news.html">News</a></li>
+                        <li><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li><a class="nav-link" href="faq.html">FAQ</a></li>
+                        <li class="nav-cta">
+                            <a href="#donate-form" class="btn-donate" aria-label="Jump to the donation form">
+                                <i class="fas fa-heart" aria-hidden="true"></i> Donate
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main id="main-content">
+
+        <!-- ===== HERO ===== -->
+        <section class="donate-hero" aria-labelledby="donate-hero-heading">
+            <div class="donate-hero-bg"></div>
+            <div class="donate-hero-scrim"></div>
+            <div class="container donate-hero-inner">
+                <p class="eyebrow eyebrow-light"><span class="tag-dot" aria-hidden="true"></span>Every Shilling Has A Story</p>
+                <h1 id="donate-hero-heading" class="donate-hero-title">Your Gift Becomes <em>Their Story</em></h1>
+                <p class="donate-hero-lead">
+                    Behind every donation is a child who stayed in school, a mentor who showed up,
+                    a community that grew stronger. Below are four of their stories &mdash; and a
+                    simple way to write the next one.
+                </p>
+                <div class="donate-hero-actions">
+                    <a href="#donate-form" class="btn btn-primary-warm btn-lg">
+                        <i class="fas fa-heart" aria-hidden="true"></i> Give Now
+                    </a>
+                    <a href="#stories" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-book-open" aria-hidden="true"></i> Read Their Stories
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== IMPACT STATS ===== -->
+        <section class="donate-stats" aria-label="Our impact so far">
+            <div class="container">
+                <div class="donate-stats-grid">
+                    <div class="donate-stat-item">
+                        <span class="donate-stat-num" data-count-to="3200" data-suffix="+">0</span>
+                        <span class="donate-stat-label">Students Reached</span>
+                    </div>
+                    <div class="donate-stat-item">
+                        <span class="donate-stat-num" data-count-to="180" data-suffix="+">0</span>
+                        <span class="donate-stat-label">Active Volunteers</span>
+                    </div>
+                    <div class="donate-stat-item">
+                        <span class="donate-stat-num" data-count-to="12">0</span>
+                        <span class="donate-stat-label">Programs Running</span>
+                    </div>
+                    <div class="donate-stat-item">
+                        <span class="donate-stat-num" data-count-to="4">0</span>
+                        <span class="donate-stat-label">Communities Served</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== STORIES ===== -->
+        <section class="donate-stories" id="stories" aria-labelledby="stories-heading">
+            <div class="container">
+                <div class="section-head text-center">
+                    <p class="eyebrow justify-center"><span class="tag-dot" aria-hidden="true"></span>Stories That Inspire</p>
+                    <h2 id="stories-heading" class="section-title">Four Lives, <span class="accent">One Cause</span></h2>
+                    <p class="section-sub">Real young people, real turning points &mdash; made possible by donors like you.</p>
+                </div>
+
+                <div class="donate-story-list">
+
+                    <article class="donate-story-card fade-up" data-story="faith">
+                        <div class="donate-story-media">
+                            <img src="https://images.unsplash.com/photo-1620829813573-7c9e1877706f?auto=format&fit=crop&w=800&q=80"
+                                 alt="Faith working on a laptop, learning to code" loading="lazy" decoding="async" width="800" height="600" />
+                        </div>
+                        <div class="donate-story-body">
+                            <span class="donate-story-tag">STEM Engagement</span>
+                            <h3>From Curiosity To Code</h3>
+                            <p class="donate-story-teaser">
+                                Faith had never touched a computer before her first STEM Saturday. Eighteen
+                                months later, she's built her first website &mdash; and she's teaching
+                                other girls in her class to do the same.
+                            </p>
+                            <div class="donate-story-full">
+                                <p>
+                                    When Faith joined our STEM Engagement program at fourteen, she'd never
+                                    typed on a keyboard. Her secondary school in Kitui had one shared computer
+                                    for over three hundred students, and it rarely worked.
+                                </p>
+                                <p>
+                                    Every Saturday for a year, she walked forty minutes to our learning
+                                    center to sit through basic computing, then HTML, then her first lines
+                                    of JavaScript. Her mentor remembers the week she stopped asking
+                                    "how do I do this" and started asking "what if I tried this instead."
+                                </p>
+                                <p>
+                                    Today, Faith has built a website for her church's youth group and is
+                                    one of six girls from her cohort now mentoring the newest STEM Saturday
+                                    intake &mdash; the same program that started her journey.
+                                </p>
+                            </div>
+                            <button type="button" class="donate-story-toggle" aria-expanded="false">
+                                Read Faith's full story <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="donate-story-card fade-up" data-story="david">
+                        <div class="donate-story-media">
+                            <img src="https://images.unsplash.com/photo-1631131426242-0abfa7f209c2?auto=format&fit=crop&w=800&q=80"
+                                 alt="David wearing a graduation cap and gown" loading="lazy" decoding="async" width="800" height="600" />
+                        </div>
+                        <div class="donate-story-body">
+                            <span class="donate-story-tag">Academic Training</span>
+                            <h3>The First In His Family To Graduate</h3>
+                            <p class="donate-story-teaser">
+                                David's school fees ran out twice. Twice, a donor's gift covered the gap
+                                &mdash; and this year, he became the first person in his family to complete
+                                secondary school.
+                            </p>
+                            <div class="donate-story-full">
+                                <p>
+                                    David's father drives a boda boda and his mother sells vegetables at the
+                                    local market. Between them, they could cover most terms &mdash; but not
+                                    all of them. In Form 2, David nearly dropped out when the family fell
+                                    short by a few thousand shillings.
+                                </p>
+                                <p>
+                                    Our Academic Training program covered the gap that term, and again in
+                                    Form 3 when a family emergency ate into the household's savings. Beyond
+                                    the fees, David joined our weekly study circles, where volunteer tutors
+                                    helped him catch up in mathematics &mdash; a subject he'd almost given
+                                    up on entirely.
+                                </p>
+                                <p>
+                                    This year, David sat his final exams and graduated &mdash; the first in
+                                    his family to finish secondary school. He's now applying for a technical
+                                    college diploma in electrical installation.
+                                </p>
+                            </div>
+                            <button type="button" class="donate-story-toggle" aria-expanded="false">
+                                Read David's full story <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="donate-story-card fade-up" data-story="twins">
+                        <div class="donate-story-media">
+                            <img src="https://images.unsplash.com/photo-1548102245-c79dbcfa9f92?auto=format&fit=crop&w=800&q=80"
+                                 alt="Twin brothers Peter and Paul standing together" loading="lazy" decoding="async" width="800" height="600" />
+                        </div>
+                        <div class="donate-story-body">
+                            <span class="donate-story-tag">Community Outreach</span>
+                            <h3>Two Brothers, One Chance</h3>
+                            <p class="donate-story-teaser">
+                                Peter and Paul are twins &mdash; and for years, their family could only
+                                afford to send one of them to school at a time. A community outreach
+                                sponsorship changed that math.
+                            </p>
+                            <div class="donate-story-full">
+                                <p>
+                                    Their mother made an impossible choice every January: which twin gets
+                                    to enroll this year, and which one waits. It had been that way since
+                                    primary school &mdash; one brother always a grade behind the other,
+                                    neither of them ever quite catching up.
+                                </p>
+                                <p>
+                                    When our outreach team visited their village for a community health
+                                    and education day, a caseworker learned their story and connected the
+                                    family to a sponsorship covering both boys' fees for the full year.
+                                </p>
+                                <p>
+                                    For the first time, Peter and Paul are in the same grade, in the same
+                                    classroom, doing homework together at the same kitchen table every
+                                    evening. Their mother says the house has never been this loud &mdash;
+                                    or this happy.
+                                </p>
+                            </div>
+                            <button type="button" class="donate-story-toggle" aria-expanded="false">
+                                Read their full story <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="donate-story-card fade-up" data-story="brian">
+                        <div class="donate-story-media">
+                            <img src="https://images.unsplash.com/photo-1547226706-af7e2c20bcea?auto=format&fit=crop&w=800&q=80"
+                                 alt="Brian, thoughtful, resting his chin on his hand" loading="lazy" decoding="async" width="800" height="600" />
+                        </div>
+                        <div class="donate-story-body">
+                            <span class="donate-story-tag">Talent Development</span>
+                            <h3>A Question That Changed Everything</h3>
+                            <p class="donate-story-teaser">
+                                Brian used to ask "why" so often his teachers ran out of patience. A mentor
+                                finally answered him &mdash; and now he's building his own small robotics
+                                projects at home.
+                            </p>
+                            <div class="donate-story-full">
+                                <p>
+                                    Brian was labeled a "difficult" student for most of primary school. He
+                                    asked too many questions, his teachers said, and disrupted the lesson.
+                                    Nobody had time to sit with a ten-year-old and actually answer "why does
+                                    electricity move through wire but not through wood?"
+                                </p>
+                                <p>
+                                    His mentor in our Talent Development program did. Over six months of
+                                    weekend sessions, that one question turned into a shared project: a
+                                    simple working circuit built from scrap wire and a torch bulb, then a
+                                    small motor, then a fan.
+                                </p>
+                                <p>
+                                    Brian now spends his evenings sketching new projects in a notebook his
+                                    mentor gave him. His teachers still say he asks a lot of questions.
+                                    Now they write his name down for the school science fair instead.
+                                </p>
+                            </div>
+                            <button type="button" class="donate-story-toggle" aria-expanded="false">
+                                Read Brian's full story <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== WHERE YOUR MONEY GOES ===== -->
+        <section class="donate-breakdown" aria-labelledby="breakdown-heading">
+            <div class="container">
+                <div class="section-head text-center">
+                    <p class="eyebrow justify-center"><span class="tag-dot" aria-hidden="true"></span>Transparency</p>
+                    <h2 id="breakdown-heading" class="section-title">Where Your Donation <span class="accent">Goes</span></h2>
+                    <p class="section-sub">Every gift is split across the work that made these four stories possible.</p>
+                </div>
+
+                <div class="donate-breakdown-bars">
+                    <div class="donate-bar-row" data-percent="40">
+                        <div class="donate-bar-label">
+                            <span>Academic Training</span><span class="donate-bar-pct">40%</span>
+                        </div>
+                        <div class="donate-bar-track"><div class="donate-bar-fill"></div></div>
+                    </div>
+                    <div class="donate-bar-row" data-percent="25">
+                        <div class="donate-bar-label">
+                            <span>Talent &amp; STEM Development</span><span class="donate-bar-pct">25%</span>
+                        </div>
+                        <div class="donate-bar-track"><div class="donate-bar-fill"></div></div>
+                    </div>
+                    <div class="donate-bar-row" data-percent="20">
+                        <div class="donate-bar-label">
+                            <span>Community Outreach</span><span class="donate-bar-pct">20%</span>
+                        </div>
+                        <div class="donate-bar-track"><div class="donate-bar-fill"></div></div>
+                    </div>
+                    <div class="donate-bar-row" data-percent="15">
+                        <div class="donate-bar-label">
+                            <span>Operations &amp; Program Support</span><span class="donate-bar-pct">15%</span>
+                        </div>
+                        <div class="donate-bar-track"><div class="donate-bar-fill"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== DONATION METHODS ===== -->
+        <section class="donate-methods" id="donate-form" aria-labelledby="donate-methods-heading">
+            <div class="container">
+                <div class="section-head text-center">
+                    <p class="eyebrow justify-center"><span class="tag-dot" aria-hidden="true"></span>Give Today</p>
+                    <h2 id="donate-methods-heading" class="section-title">Choose How <span class="accent">You'd Like To Give</span></h2>
+                    <p class="section-sub">Both methods reach the same programs &mdash; pick whichever is easier for you.</p>
+                </div>
+
+                <div class="donate-methods-grid">
+
+                    <div class="donate-panel donate-panel-mpesa fade-up">
+                        <h3><i class="fas fa-mobile-screen-button" aria-hidden="true"></i> Give Via M-Pesa</h3>
+                        <p class="donate-panel-sub">Select an amount and we'll send an STK push to your phone.</p>
+
+                        <form id="donateForm" novalidate>
+                            <div class="donate-amount-group" role="group" aria-label="Choose a donation amount">
+                                <button type="button" class="donate-amount-btn" data-amount="500">KSh 500</button>
+                                <button type="button" class="donate-amount-btn" data-amount="1000">KSh 1,000</button>
+                                <button type="button" class="donate-amount-btn" data-amount="2500">KSh 2,500</button>
+                                <button type="button" class="donate-amount-btn" data-amount="5000">KSh 5,000</button>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="donateCustomAmount" class="form-label">Or enter a custom amount</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">KSh</span>
+                                    <input type="number" id="donateCustomAmount" class="form-control" placeholder="e.g. 750" min="1" max="1000000" step="1" inputmode="numeric" />
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="donatePhone" class="form-label">Phone Number <span class="required">*</span></label>
+                                <input type="tel" id="donatePhone" class="form-control" placeholder="0712345678 or 254712345678"
+                                       required autocomplete="tel" inputmode="tel" maxlength="13"
+                                       pattern="^(0(7|1)[0-9]{8}|254(7|1)[0-9]{8})$" />
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="donateName" class="form-label">Your Name (optional)</label>
+                                <input type="text" id="donateName" class="form-control" placeholder="e.g. Jane Muthoni" autocomplete="name" maxlength="80" />
+                            </div>
+
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input type="checkbox" id="donateConsent" class="form-check-input" required value="yes" />
+                                    <label for="donateConsent" class="form-check-label">
+                                        I agree to the <a href="terms.html" target="_blank" rel="noopener noreferrer">Terms</a> and
+                                        <a href="privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a> <span class="required">*</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="honeypot" aria-hidden="true">
+                                <label for="donateHoneypot">Leave this field empty</label>
+                                <input type="text" id="donateHoneypot" tabindex="-1" autocomplete="off" />
+                            </div>
+
+                            <button type="submit" class="btn btn-primary-warm w-100" id="donateSubmitBtn2">
+                                <i class="fas fa-arrow-right" aria-hidden="true"></i> Send STK Push
+                            </button>
+
+                            <div id="donateStatus2" class="form-status" role="status" aria-live="polite"></div>
+                        </form>
+                    </div>
+
+                    <div class="donate-panel donate-panel-paybill fade-up">
+                        <h3><i class="fas fa-building-columns" aria-hidden="true"></i> Pay Via Paybill</h3>
+                        <p class="donate-panel-sub">For Airtel, Telkom, or anyone who prefers to pay directly from the M-Pesa menu.</p>
+
+                        <div class="donate-paybill-row">
+                            <div class="donate-paybill-field">
+                                <span class="donate-paybill-label">Paybill Number</span>
+                                <span class="donate-paybill-value" id="paybillNumber">522533</span>
+                            </div>
+                            <button type="button" class="donate-copy-btn" data-copy-target="paybillNumber" aria-label="Copy paybill number">
+                                <i class="fas fa-copy" aria-hidden="true"></i> Copy
+                            </button>
+                        </div>
+
+                        <div class="donate-paybill-row">
+                            <div class="donate-paybill-field">
+                                <span class="donate-paybill-label">Account Number</span>
+                                <span class="donate-paybill-value" id="paybillAccount">8039706</span>
+                            </div>
+                            <button type="button" class="donate-copy-btn" data-copy-target="paybillAccount" aria-label="Copy account number">
+                                <i class="fas fa-copy" aria-hidden="true"></i> Copy
+                            </button>
+                        </div>
+
+                        <ol class="donate-paybill-steps">
+                            <li>Go to <strong>M-Pesa</strong> &rarr; <strong>Lipa na M-Pesa</strong> &rarr; <strong>Pay Bill</strong></li>
+                            <li>Enter Business Number <strong>522533</strong></li>
+                            <li>Enter Account Number <strong>8039706</strong></li>
+                            <li>Enter the amount and your M-Pesa PIN to confirm</li>
+                        </ol>
+
+                        <p class="donate-paybill-note">
+                            <i class="fas fa-info-circle" aria-hidden="true"></i>
+                            Want a receipt for your records? <a href="contact.html">Contact us</a> with your
+                            M-Pesa transaction code once you've paid.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TESTIMONIALS ===== -->
+        <section class="donate-testimonials" aria-labelledby="testimonials-heading">
+            <div class="container">
+                <h2 id="testimonials-heading" class="visually-hidden">What Our Donors Say</h2>
+
+                <div class="donate-testimonial-slider" id="testimonialSlider">
+                    <div class="donate-testimonial-track">
+
+                        <blockquote class="donate-testimonial-slide">
+                            <p>&ldquo;I've been giving KSh 1,000 a month for two years now. Seeing Faith's
+                            story made it click &mdash; that's not just a number, that's someone's Saturday
+                            mentor session.&rdquo;</p>
+                            <cite>Monica W. &mdash; Monthly Donor</cite>
+                        </blockquote>
+
+                        <blockquote class="donate-testimonial-slide">
+                            <p>&ldquo;Paying via Paybill took less than a minute. I got a thank-you message
+                            the same day. It's the easiest giving experience I've had with any local
+                            charity.&rdquo;</p>
+                            <cite>Joseph K. &mdash; One-Time Donor</cite>
+                        </blockquote>
+
+                        <blockquote class="donate-testimonial-slide">
+                            <p>&ldquo;Our church partners with YoungStars for our annual outreach fund. The
+                            breakdown of where the money goes made it an easy decision for our leadership
+                            team.&rdquo;</p>
+                            <cite>Pastor Elijah M. &mdash; Partner Organization</cite>
+                        </blockquote>
+
+                    </div>
+
+                    <div class="donate-testimonial-controls">
+                        <button type="button" class="donate-testimonial-arrow" id="testimonialPrev" aria-label="Previous testimonial">
+                            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                        </button>
+                        <div class="donate-testimonial-dots" id="testimonialDots" role="tablist" aria-label="Choose a testimonial"></div>
+                        <button type="button" class="donate-testimonial-arrow" id="testimonialNext" aria-label="Next testimonial">
+                            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== DONATION FAQ ===== -->
+        <section class="donate-faq" aria-labelledby="donate-faq-heading">
+            <div class="container">
+                <div class="section-head text-center">
+                    <p class="eyebrow justify-center"><span class="tag-dot" aria-hidden="true"></span>Quick Answers</p>
+                    <h2 id="donate-faq-heading" class="section-title">Donation <span class="accent">Questions</span></h2>
+                </div>
+
+                <div class="accordion donate-faq-accordion" id="donateFaqAccordion">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="dFaqHeading1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dFaqCollapse1" aria-expanded="false" aria-controls="dFaqCollapse1">
+                                Is my donation secure?
+                            </button>
+                        </h3>
+                        <div id="dFaqCollapse1" class="accordion-collapse collapse" aria-labelledby="dFaqHeading1" data-bs-parent="#donateFaqAccordion">
+                            <div class="accordion-body">
+                                Yes. Donations are processed directly through M-Pesa/Paybill, so we never see
+                                or store your payment details on our website.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="dFaqHeading2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dFaqCollapse2" aria-expanded="false" aria-controls="dFaqCollapse2">
+                                Can I get a receipt?
+                            </button>
+                        </h3>
+                        <div id="dFaqCollapse2" class="accordion-collapse collapse" aria-labelledby="dFaqHeading2" data-bs-parent="#donateFaqAccordion">
+                            <div class="accordion-body">
+                                Yes &mdash; <a href="contact.html">contact us</a> with your M-Pesa transaction
+                                code and we'll send one for your records.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="dFaqHeading3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dFaqCollapse3" aria-expanded="false" aria-controls="dFaqCollapse3">
+                                Can I set up a recurring monthly gift?
+                            </button>
+                        </h3>
+                        <div id="dFaqCollapse3" class="accordion-collapse collapse" aria-labelledby="dFaqHeading3" data-bs-parent="#donateFaqAccordion">
+                            <div class="accordion-body">
+                                Not automatically yet on this page &mdash; many of our donors simply repeat
+                                their Paybill payment monthly. <a href="contact.html">Let us know</a> and
+                                we'll flag you as a recurring supporter on our end too.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="dFaqHeading4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dFaqCollapse4" aria-expanded="false" aria-controls="dFaqCollapse4">
+                                Is there a minimum donation amount?
+                            </button>
+                        </h3>
+                        <div id="dFaqCollapse4" class="accordion-collapse collapse" aria-labelledby="dFaqHeading4" data-bs-parent="#donateFaqAccordion">
+                            <div class="accordion-body">
+                                No &mdash; every amount helps. KSh 500 covers a study circle session for one
+                                student; larger gifts cover more, but there's no minimum to give.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer" role="contentinfo" aria-label="Site footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <img src="assets/img/logo.png" alt="" height="36" width="36" />
+                        <div>
+                            <span class="footer-name">YoungStars</span>
+                            <span class="footer-sub">Hope Foundation &mdash; Africa</span>
+                        </div>
+                    </div>
+                    <p class="footer-blurb">Empowering lives, inspiring dreams and transforming communities across Africa.</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="get-involved.html">Get Involved</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="programs.html#academic">Academic Training</a></li>
+                        <li><a href="programs.html#talent">Talent Development</a></li>
+                        <li><a href="programs.html#stem">STEM Engagement</a></li>
+                        <li><a href="programs.html#outreach">Community Outreach</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h4>Get In Touch</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone" aria-hidden="true"></i> +254 791 285 657</li>
+                        <li><i class="fas fa-phone" aria-hidden="true"></i> +254 112 366 543</li>
+                        <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Kitui / Nairobi, Kenya</li>
+                        <li><i class="fas fa-envelope" aria-hidden="true"></i> info@youngstarsafrica.org</li>
+                    </ul>
+                </div>
+            </div>
+            <hr />
+            <div class="footer-bottom">
+                <p>&copy; <span id="footer-year">2026</span> YoungStars Hope Foundation-Africa. All rights reserved.</p>
+                <p>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+
+    <!-- Shared site behavior (header scroll, mobile nav, back-to-top, fade-up reveal) -->
+    <script src="assets/js/main.min.js" defer></script>
+    <!-- Dedicated script for this page only -->
+    <script src="assets/js/donate.js" defer></script>
+</body>
+</html>
