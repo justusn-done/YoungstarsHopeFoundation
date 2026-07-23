@@ -1037,10 +1037,8 @@ img { max-width: 100%; display: block; }
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(135deg, rgba(10, 10, 20, 0.88) 0%, rgba(20, 14, 8, 0.82) 100%),
-        url('https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-    background-blend-mode: overlay;
-    z-index: 0;
+        linear-gradient(80deg, rgba(40, 40, 44, 0.88) 0%, rgba(48, 42, 36, 0.82) 100%),
+        url("../img/get-involved.jpeg") center/cover no-repeat;
 }
 
 .hero-scrim {
@@ -1204,7 +1202,10 @@ img { max-width: 100%; display: block; }
 
 /* ===== Get Involved banner background ===== */
 .banner-bg-involved {
-    background-image: url('https://images.unsplash.com/photo-1652971876875-05db98fab376?auto=format&fit=crop&w=1920&q=80');
+  background-image: url("../img/get-involved.jpeg");
+  background-size: cover;
+  background-position: center;
+  min-height: 300px; /* ensures visibility */
 }
 
 /* ===== "Donate" option card rendered as a <button> ===== */
