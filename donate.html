@@ -346,62 +346,6 @@
                 </div>
 
                 <div class="donate-methods-grid">
-
-                    <div class="donate-panel donate-panel-mpesa fade-up">
-                        <h3><i class="fas fa-mobile-screen-button" aria-hidden="true"></i> Give Via M-Pesa</h3>
-                        <p class="donate-panel-sub">Select an amount and we'll send an STK push to your phone.</p>
-
-                        <form id="donateForm" novalidate>
-                            <div class="donate-amount-group" role="group" aria-label="Choose a donation amount">
-                                <button type="button" class="donate-amount-btn" data-amount="500">KSh 500</button>
-                                <button type="button" class="donate-amount-btn" data-amount="1000">KSh 1,000</button>
-                                <button type="button" class="donate-amount-btn" data-amount="2500">KSh 2,500</button>
-                                <button type="button" class="donate-amount-btn" data-amount="5000">KSh 5,000</button>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="donateCustomAmount" class="form-label">Or enter a custom amount</label>
-                                <div class="input-group">
-                                    <span class="input-group-text">KSh</span>
-                                    <input type="number" id="donateCustomAmount" class="form-control" placeholder="e.g. 750" min="1" max="1000000" step="1" inputmode="numeric" />
-                                </div>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="donatePhone" class="form-label">Phone Number <span class="required">*</span></label>
-                                <input type="tel" id="donatePhone" class="form-control" placeholder="0712345678 or 254712345678"
-                                       required autocomplete="tel" inputmode="tel" maxlength="13"
-                                       pattern="^(0(7|1)[0-9]{8}|254(7|1)[0-9]{8})$" />
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="donateName" class="form-label">Your Name (optional)</label>
-                                <input type="text" id="donateName" class="form-control" placeholder="e.g. Jane Muthoni" autocomplete="name" maxlength="80" />
-                            </div>
-
-                            <div class="mb-3">
-                                <div class="form-check">
-                                    <input type="checkbox" id="donateConsent" class="form-check-input" required value="yes" />
-                                    <label for="donateConsent" class="form-check-label">
-                                        I agree to the <a href="terms.html" target="_blank" rel="noopener noreferrer">Terms</a> and
-                                        <a href="privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a> <span class="required">*</span>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="honeypot" aria-hidden="true">
-                                <label for="donateHoneypot">Leave this field empty</label>
-                                <input type="text" id="donateHoneypot" tabindex="-1" autocomplete="off" />
-                            </div>
-
-                            <button type="submit" class="btn btn-primary-warm w-100" id="donateSubmitBtn2">
-                                <i class="fas fa-arrow-right" aria-hidden="true"></i> Send STK Push
-                            </button>
-
-                            <div id="donateStatus2" class="form-status" role="status" aria-live="polite"></div>
-                        </form>
-                    </div>
-
                     <div class="donate-panel donate-panel-paybill fade-up">
                         <h3><i class="fas fa-building-columns" aria-hidden="true"></i> Pay Via Paybill</h3>
                         <p class="donate-panel-sub">For Airtel, Telkom, or anyone who prefers to pay directly from the M-Pesa menu.</p>
