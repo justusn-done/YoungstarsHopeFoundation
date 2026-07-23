@@ -150,7 +150,14 @@ img { max-width: 100%; display: block; }
     font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: var(--on-dark);
     transition: color 0.35s ease;
 }
-.brand-sub { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.1em; color: var(--gold); text-transform: uppercase; }
+.brand-sub {
+  font-family: var(--font-sans); /* switch to a clean sans-serif */
+  font-size: 0.75rem;            /* slightly larger for legibility */
+  letter-spacing: 0.05em;        /* reduce spacing for tighter clarity */
+  color: var(--gold);            /* keep your gold color */
+  font-weight: 500;              /* add medium weight for visibility */
+  text-transform: uppercase;     /* retain uppercase styling */
+}
 .site-header.is-scrolled .brand-name { color: var(--ink); }
 
 .nav-toggle {
@@ -1209,7 +1216,7 @@ img { max-width: 100%; display: block; }
 /* ===== Volunteer section image =====
    The form beside it runs long (6 fields + textarea + consent),
    so instead of guessing a height, the left column becomes a
-   flex column: heading/lede take their natural height, then the
+   flex column: heading take their natural height, then the
    image flex-grows to fill exactly what's left — so its bottom
    edge always lines up with the form panel's bottom edge, no
    matter how tall the form ends up being. */
